@@ -1,0 +1,11 @@
+
+How to use:
+
+1.) pip install jinja2
+2.) Put new people in faculty_list.txt.  See that file for instructions.
+3.) Images into images folder.  
+4.) python makepeople.py
+5.) Open the people page on drupal.
+6.) Add any new images in to media/images_people
+7.) Copy and Paste the people.html that makepeople.py made.
+8.) Save as draft.

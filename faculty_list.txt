@@ -1,0 +1,916 @@
+#Here is the list of faculty and staff in the physics department.  
+#It's kind of a dumb format, but it was easy to make and parse.
+#Each person requires displaname.  That's Last, First
+#displayname has to happen first (probably)
+#group to happen last (definitely).  That's one of
+#group="faculty"
+#group="research_faculty"
+#group="nonr_fac"
+#group="teaching_faculty"
+#group="emeritus"
+#group="postdocs"
+#group="staff"
+#Other options are
+#title  (Assistant Professor, etc)
+#room   (location)
+#phone 
+#email  (in a format you would send, it gets parsed)
+#web    (web page)
+#other  (other notes; totally ignored)
+#image  (name of image file.  If blank, LastFirst.png is assumed)
+#withus (if False, the person is omitted from the page)
+#group  (in the above, must be last)
+#
+#Note that nothing actually needs quotes. Double quotes are removed.
+
+
+displayname = "Adams, Todd"
+web="http://web2.physics.fsu.edu/~adams/bio.html"
+title="Professor"
+room="515 KEN"
+phone="4-7159"
+email="tadams@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Almaraz-Calderon, Sergio"
+web="http://web2.physics.fsu.edu/~calderon/bio.html"
+title="Assistant Professor"
+room="216 KEN"
+phone="5-9215"
+email="salmaraz@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Askew, Andrew"
+web="http://web2.physics.fsu.edu/~askew/bio.html"
+title="Associate Professor"
+room="517 KEN"
+phone="5-9343"
+email="askew@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Beekman, Christianne"
+web="http://web2.physics.fsu.edu/~beekman/bio.html"
+title="Assistant Professor"
+room="418 KEN"
+phone="5-0975 KEN, 4-5993 MAG"
+email="beekman@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Berg, Bernd"
+web="http://web2.physics.fsu.edu/~berg/bio.html"
+title="Professor"
+room="615 KEN"
+phone="4-6246"
+email="berg@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Blessing, Susan"
+web="http://web2.physics.fsu.edu/~blessing/bio.html"
+title="Professor"
+room="508 KEN"
+phone="4-1032"
+email="blessing@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Boebinger, Gregory"
+web="http://web2.physics.fsu.edu/~boebinger/bio.html"
+title="Professor"
+room="B204 MAG"
+phone="4-0851"
+email="gsb@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Bonesteel, Nicholas"
+web="http://web2.physics.fsu.edu/~bonesteel/bio.html"
+title="Professor&amp; Associate Chair"
+room="410 KEN"
+phone="4-2516"
+email="bonestee@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Cao, Jianming"
+web="http://web2.physics.fsu.edu/~cao/bio.html"
+title="Professor"
+room="A309A MAG"
+phone="4-0527"
+email="jcao@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Capstick, Simon"
+web="http://web2.physics.fsu.edu/~capstick/bio.html"
+title="Professor"
+room="207 KEN"
+phone="4-1724"
+email="capstick@fsu.edu"
+group = "faculty"
+
+
+displayname="Chiorescu, Irinel"
+web="http://web2.physics.fsu.edu/~chiorescu/bio.html"
+title="Professor"
+room="703-b KEN"
+phone="4-3414"
+email="ic@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Collins, David"
+web="http://web2.physics.fsu.edu/~collins/bio.html"
+title="Assistant Professor"
+room="604 KEN"
+phone="5-0689"
+email="dccollins@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Cottle, Paul"
+web="http://web2.physics.fsu.edu/~cottle/bio.html"
+title="Professor"
+room="219 KEN"
+phone="4-5777"
+email="cottle@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Crede, Volker"
+web="http://web2.physics.fsu.edu/~crede/bio.html"
+title="Professor"
+room="206 KEN"
+phone="4-2423"
+email="crede@fsu.edu"
+group = "faculty"
+
+
+displayname="Dobbs, Sean"
+email="sdobbs@fsu.edu"
+room="206 KEN"
+phone="5-3812"
+title="Assistant Professor"
+group="faculty"
+
+
+displayname="Dobrosavljevic, Vladimir"
+web="http://web2.physics.fsu.edu/~dobrosavljevic/bio.html"
+title="Professor"
+room="611 KEN"
+phone="4-9755, 4-5693"
+email="vlad@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Duke, Dennis"
+web="http://web2.physics.fsu.edu/~duke/bio.html"
+title="Professor"
+room="617 KEN"
+phone="4-0175"
+email="dduke@csit.fsu.edu"
+group = "faculty"
+
+
+displayname="Eugenio, Paul"
+web="http://web2.physics.fsu.edu/~eugenio/bio.html"
+title="Professor"
+room="205 KEN"
+phone="4-2585"
+email="eugenio@fsu.edu"
+group = "faculty"
+
+
+displayname="Gao, Hanwei"
+web="http://web2.physics.fsu.edu/~gao/bio.html"
+title="Assistant Professor"
+room="407 KEN,"
+phone="4-1218"
+email="h-gao@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Greene, Laura H."
+web="https://nationalmaglab.org/"
+image = "GreeneLaura.png"
+title="Professor"
+room="B206 MAG"
+phone="4-1466"
+email="lhgreene@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Hill, Stephen"
+web="http://web2.physics.fsu.edu/~hill/bio.html"
+title="Professor"
+room="310 KEN"
+phone="5-8793"
+email="shill@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Hoeflich, Peter"
+web="http://web2.physics.fsu.edu/~hoeflich/bio.html"
+title="Professor"
+room="613 KEN"
+phone="512-484-5910"
+email="phoeflich77@gmail.com"
+group = "faculty"
+
+
+displayname="Hsiao, Eric"
+web="http://colvin.physics.fsu.edu/hsiao/"
+title="Assistant Professor"
+room="616 KEN"
+phone="510-200-8230"
+email="hsiao@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Huffenberger, Kevin"
+web="http://web2.physics.fsu.edu/~huffenberger/bio.html"
+title="Associate Professor"
+room="609 KEN"
+phone="5-9409"
+email="huffenbe@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Kolberg, Ted"
+web="http://www.hep.fsu.edu/~tkolberg"
+title="Assistant Professor"
+room="519 KEN"
+phone="4-3893"
+email="tkolberg@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Lind, David"
+web="http://web2.physics.fsu.edu/~lind/bio.html"
+title="Associate Professor"
+room="405 KEN"
+phone="4-1576"
+email="lind@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Manousakis, Efstratios"
+web="http://web2.physics.fsu.edu/~manousakis/bio.html"
+title="Professor"
+room="612 KEN"
+phone="4-3713"
+email="stratos@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Murphy, Jeremiah"
+web="http://web2.physics.fsu.edu/~murphy/bio.html"
+title="Assistant Professor"
+room="606 KEN"
+phone="4-5076"
+email="jwmurphy@fsu.edu"
+group = "faculty"
+
+
+displayname="Ng, Hon-Kie"
+web="http://web2.physics.fsu.edu/~ng/bio.html"
+title="Associate Professor"
+room="416 KEN"
+phone="4-4558"
+email="ng@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Okui, Takemichi"
+web="http://web2.physics.fsu.edu/~okui/bio.html"
+title="Associate Professor"
+room="511 KEN"
+phone="4-3523"
+email="okui@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Piekarewicz, Jorge"
+web="http://web2.physics.fsu.edu/~piekarewicz/bio.html"
+title="Professor"
+room="204 KEN"
+phone="4-6344"
+email="jpiekarewicz@fsu.edu"
+group = "faculty"
+
+
+displayname="Prosper, Harrison"
+web="http://web2.physics.fsu.edu/~prosper/bio.html"
+title="Professor"
+room="514 KEN"
+phone="4-6760"
+email="harry@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Reina, Laura"
+web="http://web2.physics.fsu.edu/~reina/bio.html"
+title="Professor"
+room="510 KEN"
+phone="4-9282"
+email="reina@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Rikvold, Per Arne"
+web="http://web2.physics.fsu.edu/~rikvold/bio.html"
+title="Professor"
+room="413 KEN"
+phone="4-6814"
+email="prikvold@fsu.edu"
+group = "faculty"
+
+
+displayname="Riley, Mark"
+web="http://web2.physics.fsu.edu/~riley/bio.html"
+title="Professor"
+room="214 KEN"
+phone="4-2066"
+email="mriley@nucmar.physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Roberts, Winston"
+web="http://web2.physics.fsu.edu/~roberts/wr.html"
+title="Professor"
+room="605 KEN"
+phone="4-2223"
+email="wroberts@fsu.edu"
+group = "faculty"
+
+
+displayname="Tabor, Samuel"
+web="http://web2.physics.fsu.edu/~tabor/bio.html"
+title="Professor"
+room="213 KEN"
+phone="4-5528"
+email="tabor@nucmar.physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Vafek, Oskar"
+web="http://web2.physics.fsu.edu/~vafek/bio.html"
+title="Professor"
+room="309 KEN"
+phone="4-4391"
+email="vafek@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Van Winkle, David"
+web="http://web2.physics.fsu.edu/~vanwinkle/bio.html"
+title="Professor"
+room="414 KEN"
+phone="4-6019"
+email="rip@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Volya, Alexander"
+web="http://web2.physics.fsu.edu/~volya/bio.html"
+title="Associate Professor"
+room="209 KEN"
+phone="4-1804"
+email="volya@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Wahl, Horst"
+web="http://web2.physics.fsu.edu/~wahl/bio.html"
+title="Professor and Chair"
+room="512 KEN"
+phone="4-3509"
+email="wahl@hep.fsu.edu"
+group = "faculty"
+
+
+displayname="Wiedenhover, Ingo"
+web="http://web2.physics.fsu.edu/~wiedenhover/bio.html"
+title="Professor"
+room="217 KEN"
+phone="4-1429"
+email="iwiedenhover@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Xiong, Peng"
+web="http://web2.physics.fsu.edu/~xiong/bio.html"
+title="Professor"
+room="409 KEN"
+phone="4-5849"
+email="xiong@physics.fsu.edu"
+group = "faculty"
+
+
+displayname="Yang, Kun"
+web="http://web2.physics.fsu.edu/~yang/bio.html"
+title="Professor"
+room="404 KEN"
+phone="4-5373"
+email="kunyang@magnet.fsu.edu"
+group = "faculty"
+
+
+displayname="Yohay, Rachel"
+title="Assistant Professor"
+room="520 KEN"
+phone="4-4777"
+email="ryohay@fsu.edu"
+group = "faculty"
+
+
+displayname="Zhou, Huan-Xiang"
+web="http://web2.physics.fsu.edu/~zhou/bio.html"
+title="Professor"
+room="419 KLB"
+phone="5-1336"
+email="hzhou4@fsu.edu"
+group = "faculty"
+
+
+displayname = "Hori, Yuko"
+web="http://web2.physics.fsu.edu/~hori/bio.html"
+title="Teaching Faculty I"
+room="703A KEN"
+phone="4-2228"
+email="yhori@fsu.edu"
+group="teaching_faculty"
+
+displayname="Baby, Lagy T"
+title="Research Faculty III"
+room="116 NRB"
+phone="4-5598"
+email="lbaby@fsu.edu"
+group="research_faculty"
+
+displayname="Balicas, Luis"
+title="Research Professor"
+room="A3145 MAG"
+phone="4-4201"
+email="balicas@magnet.fsu.edu"
+group="research_faculty"
+
+displayname="Caussyn, David"
+title="Research Faculty II"
+room="209 NRB"
+phone="4-6209"
+email = "caussyn@nucmar.physics.fsu.edu"
+group="research_faculty"
+
+displayname="Choi, Eun Sang"
+title="Research Faculty II"
+room="A-121B MAG"
+phone="4-1055"
+email = "echoi@magnet.fsu.edu"
+group="research_faculty"
+
+displayname="Frawley, Anthony"
+title="Research Faculty III"
+room="210 KEN"
+phone="4-4034"
+email = "afrawley@fsu.edu"
+group="research_faculty"
+
+displayname="Green, Bill"
+title="Research Professor"
+room="607 KEN"
+phone=""
+email="bgreen@physics.fsu.edu"
+group="research_faculty"
+
+displayname="Hannahs, Scott"
+title="Distinguished University Scholar (Research Faculty III)"
+room="A-109D MAG"
+phone="4-216"
+email = "sth@magnet.fsu.edu"
+group="research_faculty"
+
+displayname = "Martinez, German:
+title = "Research Faculty I"
+email = "grmartinez@fsu.edu"
+group="research_faculty"
+
+displayname = "Myers, Edmund"
+web="http://web2.physics.fsu.edu/~myers/"
+title="Research Faculty III"
+room="115 NRB"
+phone="4-4040"
+email="myers@nucmar.physics.fsu.edu"
+group="research_faculty"
+
+displayname = "Popovic, Dragana"
+title="Research Professor"
+room="A309b MAG"
+phone=4-3913"
+email = "dragana@magnet.fsu.edu"
+group="research_faculty"
+
+displayname = "Smirnov, Dmitry"
+title="Senior Scientist"
+room="A121A MAG"
+phone="4-5399"
+email = "smirnov@magnet.fsu.edu"
+group="research_faculty"
+
+displayname = "Tripathi, Vandana"
+title = "Research Faculty II"
+room="218 KEN"
+phone=""
+email = "tripathi@nucmar.physics.fsu.edu"
+group="research_faculty"
+
+displayname="Johnson, Kurtis"
+title="Computer Research Specialist"
+room="519 KEN"
+phone="4-3893"
+email="kurtis@hep.fsu.edu"
+group = "nonr_fac"
+displayname="Lochner, Eric"
+title="Scientific Research Specialist"
+room="105A KEN"
+phone="4-3456"
+email = "lochner@physics.fsu.edu"
+group = "nonr_fac"
+displayname="Reyes, Barbara"
+title="Instructional Speciallist II"
+room="111 UPL"
+phone="4-6822"
+email = "breyes@physics.fsu.edu"
+group = "nonr_fac"
+displayname="Schmidt, Brian"
+title="Associate in Research"
+room="106 NRB"
+phone="4-1223"
+email = "schmidt@fsunuc.physics.fsu.edu"
+group = "nonr_fac"
+displayname="Spingler, David"
+title="Associate in Research"
+room="31 NRB"
+phone="4-1191"
+email = "spingler@nucmar.physics.fsu.edu"
+group = "nonr_fac"
+
+displayname="Albright, John"
+title=="Emeritus Professor"
+room="&nbsp;"
+phone="&nbsp;"
+email="jraphysics@aol.com"
+group="emeritus"
+displayname="Desloge, Edward"
+title="Emeritus Professor"
+room="&nbsp;"
+phone="&nbsp;"
+group="emeritus"
+displayname="Fletcher, Neil"
+title="Emeritus Professor"
+room="&nbsp;"
+phone="&nbsp;"
+email="nrf@nucott.physics.fsu.edu"
+group="emeritus"
+
+displayname="Hagopian, Sharon"
+title="Emeritus Physicist"
+room="520 KEN"
+phone="4-4777"
+email="hagopian@hep.fsu.edu"
+group="emeritus"
+
+displayname="Hagopian, Vasken"
+title="Emeritus Professor"
+room="620 KEN"
+phone="4-3734"
+email="vasken@hep.fsu.edu"
+group="emeritus"
+
+displayname="Kemper, Kirby"
+title="Emeritus Professor"
+room="210 NRB"
+phone="5-0349"
+email="kirby@physics.fsu.edu"
+group="emeritus"
+
+displayname="Kimel, Daniel"
+title="Emeritus Professor"
+room="&nbsp;"
+phone="&nbsp;"
+email="kimel@physics.fsu.edu"
+group="emeritus"
+
+displayname="Moulton, Grace"
+title="Emeritus Professor"
+room="MAG"
+phone="4-5247"
+email="moulton@magnet.fsu.edu"
+group="emeritus"
+
+displayname="Owens, Joseph"
+web = "http://web2.physics.fsu.edu/~owens/bio.html"
+title="Professor"
+room="506 KEN"
+phone="4-4765"
+email="owens@hep.fsu.edu"
+group="emeritus"
+
+displayname="Philpott, John"
+title="Emeritus Professor"
+room="&nbsp;"
+phone="&nbsp;"
+group="emeritus"
+
+displayname="Plendl, Hans"
+title="Emeritus Professor"
+room="&nbsp;"
+phone="&nbsp;"
+email="plendl@phy.fsu.edu"
+group="emeritus"
+
+displayname="Robson, Donald"
+title="Emeritus Professor"
+room="211 KEN"
+phone="4-1767"
+email="robson@csit.fsu.edu"
+group="emeritus"
+
+displayname="Schlottmann, Pedro"
+title="Professor"
+room="311 KEN"
+phone="4-0055"
+email="schlottmann@physics.fsu.edu"
+group="emeritus"
+
+displayname="Schrieffer, Robert"
+title="Emeritus Professor"
+room="a307 MAG"
+phone="4-3203"
+email="schrieff@magnet.fsu.edu"
+group="emeritus"
+
+displayname="Skofronick, James"
+title="Emeritus Professor"
+room="&nbsp;"
+phone="&nbsp;"
+email="skofronick@phy.fsu.edu"
+group="emeritus"
+
+displayname="Testardi, Louis"
+title="Emeritus Professor"
+room="&nbsp;"
+phone="&nbsp;"
+withus=False
+email="ltestard@phy.fsu.edu"
+group="emeritus"
+
+displayname="von Moln&aacute;r, Stephan"
+image="vonMolnarStephan2.png"
+title="Professor"
+room="406 KEN"
+phone="4-5075"
+email="molnar@physics.fsu.edu"
+group="emeritus"
+
+
+
+displayname="Chen, Li"
+group = "postdocs"
+email = "lchen6@fsu.edu"
+
+
+displayname="Hamzeloui, Saeed"
+title="Postdoctoral Fellow"
+room="NRB 119"
+phone="&nbsp;"
+group = "postdocs"
+
+
+displayname="Lai, Hsin-Hua"
+title="Postdoctoral Fellow"
+room="MAG"
+phone="5-0106"
+group = "postdocs"
+
+
+displayname="Perry, Thomas"
+title="&nbsp;"
+room="&nbsp;"
+phone="&nbsp;"
+email="tmperry@cern.ch"
+group = "postdocs"
+
+displayname="Quackenbush, Seth"
+title="&nbsp;"
+room="&nbsp;"
+phone="&nbsp;"
+email="squackenbush@fsu.edu"
+group = "postdocs"
+
+
+displayname="Reuschle, Chris"
+title="Postdoctoral Fellow"
+room="505 Keen"
+phone="&nbsp;"
+email="creuschle@hep.fsu.edu"
+group = "postdocs"
+
+
+displayname="Rotti, Aditya"
+title="&nbsp;"
+room="&nbsp;"
+phone="&nbsp;"
+email="arotti@fsu.edu"
+group = "postdocs"
+
+
+displayname="Sharma, Varun"
+title="&nbsp;"
+room="&nbsp;"
+phone="&nbsp;"
+email="varunsharma023@gmail.com"
+other="vsharma2@fsu.edu"
+group = "postdocs"
+
+
+displayname="Sur, Shouvik</td>
+email="sur@magnet.fsu.edu"
+group="postdocs"
+
+displayname="Aragon, Jason"
+title="Technical/Research Designer"
+room="45 NRB"
+phone="4-6734"
+email="aragon@physics.fsu.edu"
+group = "staff"
+
+displayname="Barber, Powell"
+title="Technical/Research Designer"
+room="037 NRB"
+phone="4-6477"
+email="pbarber@fsu.edu"
+group="staff"
+
+displayname="Baxter, Scott"
+title="Publications/Graphics Artist"
+room="320 KEN"
+phone="4-1294"
+email="sbaxter@physics.fsu.edu"
+group="staff"
+
+displayname="Beck, Roger"
+title="Program Coordinator"
+room="308 KEN"
+phone="4-1493"
+email="rbeck@hep.fsu.edu"
+group="staff"
+
+displayname="Boisseau, Richard"
+title="Technical/Research Designer"
+room="45 NRB"
+phone="4-6734"
+email="boisseau@phy.fsu.edu"
+group="staff"
+
+displayname="Bradley, Christopher"
+title="Teaching Laboratory Specialist"
+room="111 UPL"
+phone="4-6794"
+email="bradley@physics.fsu.edu"
+group="staff"
+
+displayname="Bravo, Michelle"
+title="Administrative Associate"
+room="313 KEN"
+phone="5-9212"
+email="mbravo@physics.fsu.edu"
+group="staff"
+
+displayname="Brown, Greg"
+title="Technical/Research Designer"
+room="34 NRB"
+phone="4-6518"
+email="gbrown@nucmar.physics.fsu.edu"
+group="staff"
+
+displayname="Cartagine, Mark"
+title="Teaching Laboratory Specialist"
+room="103 UPL"
+phone="4-1194"
+email="cartagine@physics.fsu.edu"
+group="staff"
+
+displayname="Crowdis, Eva Maria"
+title="Office Administrator/Assistant to the Chair"
+room="312 KEN"
+phone="4-2724"
+email="crowdis@physics.fsu.edu"
+group="staff"
+
+displayname="Jerrels, Monica"
+title="Accounting Representative"
+room="315 KEN"
+phone="644-2894"
+email="mjerrels@fsu.edu"
+group="staff"
+
+displayname="Koetz, Kurt"
+title="Research Engineer"
+room="403 KEN"
+phone="4-3770"
+email="koetz@physics.fsu.edu"
+group="staff"
+
+displayname="Mork, Kathryn"
+title="Administrative Support Assistant"
+room="513 KEN"
+phone="4-1492"
+email="mork@hep.fsu.edu"
+group="staff"
+
+displayname="Powell, Phyllis"
+title="Grants Compliance Associate"
+room="308 KEN"
+phone="4-3745"
+email="powell@physics.fsu.edu"
+group="staff"
+
+displayname="Roberts, Mark"
+title="Technical/Research Designer"
+room="5 NRB"
+phone="4-6457"
+email="mroberts@physics.fsu.edu"
+group="staff"
+
+displayname="Ryan, Joe"
+title="Systems Administration Manager"
+room="518 KEN"
+phone="4-4539"
+email="joe.ryan.fsu@gmail.com"
+group="staff"
+
+displayname="Shaw-Hall, Laticia"
+title="Administrative Assistant"
+room="315 KEN"
+phone="4-2868"
+
+displayname="Smith, Randall"
+title="Technical/Research Designer"
+room="1 KEN"
+phone="4-2433"
+email="rtsmith@phy.fsu.edu"
+group="staff"
+
+displayname="Smith, Robert"
+title="Technical/Research Designer"
+room="105A KEN"
+phone="5-7468"
+email="smith@physics.fsu.edu"
+group="staff"
+
+displayname="Valdes, Alisabet"
+title="Business Manager"
+room="318 KEN"
+phone="4-6476"
+email="afvaldes@fsu.edu"
+group="staff"
+
+displayname="Whitaker, John"
+title="IT Support Specialist"
+room="403 KEN"
+phone="4-0499"
+email="jwhitaker@physics.fsu.edu"
+group="staff"
+
+displayname="White, Greg"
+title="Technical/Research Designer"
+room="001 KEN"
+phone="4-2433"
+email="white@phy.fsu.edu"
+group="staff"
+
+displayname="Wilcoxon, Brian"
+title="Undergraduate Coordinator"
+room="307 KEN"
+phone="644-3245"
+email="bwilcoxon@physics.fsu.edu"
+group="staff"
+
+displayname="Yeargan, Jonathan"
+title="Program Coordinator"
+room="212 KEN"
+phone="4-2084"
+email="yeargan@nucmar.physics.fsu.edu"
+group="staff"
+
+displayname="Youngblood, Felicia"
+title="Graduate Coordinator"
+room="305 Keen</td>
+phone="4-4473</td>
+email="fky11@fsu.edu"
+group="staff"
