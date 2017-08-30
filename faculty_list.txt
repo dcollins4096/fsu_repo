@@ -3,13 +3,8 @@
 #Each person requires displaname.  That's Last, First
 #displayname has to happen first (probably)
 #group to happen last (definitely).  That's one of
-#group="faculty"
-#group="research_faculty"
-#group="nonr_fac"
-#group="teaching_faculty"
-#group="emeritus"
-#group="postdocs"
-#group="staff"
+#faculty research_faculty nonr_fac teaching_faculty emeritus
+#postdocs staff
 #Other options are
 #title  (Assistant Professor, etc)
 #room   (location)
