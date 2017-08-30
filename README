@@ -9,3 +9,9 @@ How to use:
 6.) Add any new images in to media/images_people
 7.) Copy and Paste the people.html that makepeople.py made.
 8.) Save as draft.
+
+
+NOTES
+1.) Set local_image=True to make sure everything worked on your machine.
+2.) current_page.html is what happens _after_ drupal sanitizes it.  Please copy
+the current page into this one when you've changed things.
