@@ -119,7 +119,7 @@ group = "faculty"
 
 
 displayname="Collins, David"
-web="http://web2.physics.fsu.edu/~collins/bio.html"
+web="http://astrophysics.physics.fsu.edu/~dcollins/"
 title="Assistant Professor"
 room="604 KEN"
 phone="5-0689"
