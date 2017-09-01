@@ -95,7 +95,7 @@ for line in lines:
         if stuff.has_key('displayname') and withus:
             this_group = stuff.get('group','Oops') 
             this_list = all_people.get(this_group,[])
-            stuff['local_image']=True
+            stuff['local_image']=False
 
             this_list.append(person(**stuff)) # **stuff unrolls to key=value pairs for functions
             all_people[this_group] = this_list
