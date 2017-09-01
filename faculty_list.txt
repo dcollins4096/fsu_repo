@@ -675,6 +675,7 @@ group="emeritus"
 
 
 displayname="Chen, Li"
+title="Postdoctoral Fellow"
 group = "postdocs"
 email = "lchen6@fsu.edu"
 
@@ -694,7 +695,7 @@ group = "postdocs"
 
 
 displayname="Perry, Thomas"
-title="&nbsp;"
+title=Postdoctoral Fellow
 room="&nbsp;"
 phone="&nbsp;"
 email="tmperry@cern.ch"
@@ -717,7 +718,7 @@ group = "postdocs"
 
 
 displayname="Rotti, Aditya"
-title="&nbsp;"
+title=Postdoctoral Fellow
 room="&nbsp;"
 phone="&nbsp;"
 email="arotti@fsu.edu"
@@ -725,7 +726,7 @@ group = "postdocs"
 
 
 displayname="Sharma, Varun"
-title="&nbsp;"
+title=Postdoctoral Fellow
 room="&nbsp;"
 phone="&nbsp;"
 email="varunsharma023@gmail.com"
@@ -733,8 +734,9 @@ other="vsharma2@fsu.edu"
 group = "postdocs"
 
 
-displayname="Sur, Shouvik</td>
+displayname="Sur, Shouvik"
 email="sur@magnet.fsu.edu"
+title=Postdoctoral Fellow
 group="postdocs"
 
 displayname="Aragon, Jason"
@@ -753,7 +755,7 @@ group="staff"
 
 displayname="Baxter, Scott"
 title="Publications/Graphics Artist"
-room="320 KEN"
+room="324 KEN"
 phone="4-1294"
 email="sbaxter@physics.fsu.edu"
 group="staff"
