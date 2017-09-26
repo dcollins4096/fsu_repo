@@ -16,7 +16,8 @@ def no_whites(something):
 
 class person():
     def __init__(self, displayname=None,
-            image=None,title="",room="",phone="",email=None,web=None,group=None,other=None,
+            image=None,title="",room="",phone="",email=None,web=None,group=None,
+            research_area=None, other=None,
             local_image=False):
         self.displayname=displayname
         self.image      =image
@@ -81,7 +82,7 @@ for line in lines:
     val = spl[1].strip().strip('"')
 
     #check for parsing.
-    if key in ['displayname','title','room','phone','email','web','group', 'other','image','withus']:
+    if key in ['research_area','displayname','title','room','phone','email','web','group', 'other','image','withus']:
         stuff[key]=val
     else:
         print "Unknown keyword ", line

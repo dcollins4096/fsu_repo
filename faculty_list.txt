@@ -25,6 +25,7 @@ title="Professor"
 room="515 KEN"
 phone="4-7159"
 email="tadams@hep.fsu.edu"
+research_area = "High Energy Experiment"
 group = "faculty"
 
 
@@ -34,6 +35,7 @@ title="Assistant Professor"
 room="216 KEN"
 phone="5-9215"
 email="salmaraz@physics.fsu.edu"
+research_area = "Nuclear Experiment"
 group = "faculty"
 
 
@@ -43,10 +45,12 @@ title="Associate Professor"
 room="517 KEN"
 phone="5-9343"
 email="askew@hep.fsu.edu"
+research_area = "High Energy Experiment"
 group = "faculty"
 
 
 displayname="Beekman, Christianne"
+
 web="http://web2.physics.fsu.edu/~beekman/bio.html"
 title="Assistant Professor"
 room="418 KEN"
@@ -65,6 +69,7 @@ group = "faculty"
 
 
 displayname="Blessing, Susan"
+research_area = "High Energy Experiment"
 web="http://web2.physics.fsu.edu/~blessing/bio.html"
 title="Professor"
 room="508 KEN"
@@ -119,6 +124,7 @@ group = "faculty"
 
 
 displayname="Collins, David"
+research_area = "Astrophysics"
 web="http://astrophysics.physics.fsu.edu/~dcollins/"
 title="Assistant Professor"
 room="604 KEN"
@@ -128,6 +134,7 @@ group = "faculty"
 
 
 displayname="Cottle, Paul"
+research_area = "Nuclear Experiment"
 web="http://web2.physics.fsu.edu/~cottle/bio.html"
 title="Professor"
 room="219 KEN"
@@ -209,6 +216,7 @@ group = "faculty"
 
 
 displayname="Hoeflich, Peter"
+research_area = "Astrophysics"
 web="http://web2.physics.fsu.edu/~hoeflich/bio.html"
 title="Professor"
 room="613 KEN"
@@ -218,6 +226,7 @@ group = "faculty"
 
 
 displayname="Hsiao, Eric"
+research_area = "Astrophysics"
 web="http://colvin.physics.fsu.edu/hsiao/"
 title="Assistant Professor"
 room="616 KEN"
@@ -227,6 +236,7 @@ group = "faculty"
 
 
 displayname="Huffenberger, Kevin"
+research_area = "Astrophysics"
 web="http://web2.physics.fsu.edu/~huffenberger/bio.html"
 title="Associate Professor"
 room="609 KEN"
@@ -236,6 +246,7 @@ group = "faculty"
 
 
 displayname="Kolberg, Ted"
+research_area = "High Energy Experiment"
 web="http://www.hep.fsu.edu/~tkolberg"
 title="Assistant Professor"
 room="519 KEN"
@@ -263,6 +274,7 @@ group = "faculty"
 
 
 displayname="Murphy, Jeremiah"
+research_area = "Astrophysics"
 web="http://web2.physics.fsu.edu/~murphy/bio.html"
 title="Assistant Professor"
 room="606 KEN"
@@ -299,6 +311,7 @@ group = "faculty"
 
 
 displayname="Prosper, Harrison"
+research_area = "High Energy Experiment"
 web="http://web2.physics.fsu.edu/~prosper/bio.html"
 title="Professor"
 room="514 KEN"
@@ -326,6 +339,7 @@ group = "faculty"
 
 
 displayname="Riley, Mark"
+research_area = "Nuclear Experiment"
 web="http://web2.physics.fsu.edu/~riley/bio.html"
 title="Professor"
 room="214 KEN"
@@ -344,6 +358,7 @@ group = "faculty"
 
 
 displayname="Tabor, Samuel"
+research_area = "Nuclear Experiment"
 web="http://web2.physics.fsu.edu/~tabor/bio.html"
 title="Professor"
 room="213 KEN"
@@ -362,6 +377,7 @@ group = "faculty"
 
 
 displayname="Van Winkle, David"
+research_area = "Biophysics", "Condensed Matter Experiment"
 web="http://web2.physics.fsu.edu/~vanwinkle/bio.html"
 title="Professor"
 room="414 KEN"
@@ -380,6 +396,7 @@ group = "faculty"
 
 
 displayname="Wahl, Horst"
+research_area = "High Energy Experiment"
 web="http://web2.physics.fsu.edu/~wahl/bio.html"
 title="Professor and Chair"
 room="512 KEN"
@@ -389,6 +406,7 @@ group = "faculty"
 
 
 displayname="Wiedenhover, Ingo"
+research_area = "Nuclear Experiment"
 web="http://web2.physics.fsu.edu/~wiedenhover/bio.html"
 title="Professor"
 room="217 KEN"
@@ -416,6 +434,7 @@ group = "faculty"
 
 
 displayname="Yohay, Rachel"
+research_area = "High Energy Experiment"
 title="Assistant Professor"
 room="520 KEN"
 phone="4-4777"
@@ -424,6 +443,7 @@ group = "faculty"
 
 
 displayname="Zhou, Huan-Xiang"
+research_area = "Biophysics"
 web="http://web2.physics.fsu.edu/~zhou/bio.html"
 title="Professor"
 room="419 KLB"
@@ -439,6 +459,15 @@ room="703A KEN"
 phone="4-2228"
 email="yhori@fsu.edu"
 group="teaching_faculty"
+
+displayname = "Baumbach,Ryan"
+web=https://nationalmaglab.org/research/research-groups/affiliated-labs/baumbach-lab
+title = "Assistant Research Professor"
+room = "A319 MAG"
+email="baumbach@magnet.fsu.edu"
+phone = "4-2836"
+group="research_faculty"
+
 
 displayname="Baby, Lagy T"
 title="Research Faculty III"
@@ -469,6 +498,7 @@ email = "echoi@magnet.fsu.edu"
 group="research_faculty"
 
 displayname="Frawley, Anthony"
+research_area = "Nuclear Experiment"
 title="Research Faculty III"
 room="210 KEN"
 phone="4-4034"
@@ -476,6 +506,7 @@ email = "afrawley@fsu.edu"
 group="research_faculty"
 
 displayname="Green, Bill"
+research_area = "Astrophysics"
 title="Research Professor"
 room="607 KEN"
 phone=""
@@ -495,6 +526,7 @@ email = "grmartinez@fsu.edu"
 group="research_faculty"
 
 displayname = "Myers, Edmund"
+research_area = "Atomic, Molecular and Optical"
 web="http://web2.physics.fsu.edu/~myers/"
 title="Research Faculty III"
 room="115 NRB"
@@ -524,11 +556,13 @@ email = "tripathi@nucmar.physics.fsu.edu"
 group="research_faculty"
 
 displayname="Johnson, Kurtis"
+research_area = "High Energy Experiment"
 title="Computer Research Specialist"
 room="507 KEN"
 phone="4-3893"
 email="kurtis@hep.fsu.edu"
 group = "nonr_fac"
+
 displayname="Lochner, Eric"
 title="Scientific Research Specialist"
 room="105A KEN"
@@ -555,7 +589,7 @@ email = "spingler@nucmar.physics.fsu.edu"
 group = "nonr_fac"
 
 displayname="Albright, John"
-title=="Emeritus Professor"
+title="Emeritus Professor"
 room="&nbsp;"
 phone="&nbsp;"
 email="jraphysics@aol.com"
@@ -573,6 +607,7 @@ email="nrf@nucott.physics.fsu.edu"
 group="emeritus"
 
 displayname="Hagopian, Sharon"
+research_area = "High Energy Experiment"
 title="Emeritus Physicist"
 room="620 KEN"
 phone="4-4777"
@@ -580,6 +615,7 @@ email="hagopian@hep.fsu.edu"
 group="emeritus"
 
 displayname="Hagopian, Vasken"
+research_area = "High Energy Experiment"
 title="Emeritus Professor"
 room="620 KEN"
 phone="4-3734"
@@ -587,6 +623,7 @@ email="vasken@hep.fsu.edu"
 group="emeritus"
 
 displayname="Kemper, Kirby"
+research_area = "Nuclear Experiment"
 title="Emeritus Professor"
 room="210 NRB"
 phone="5-0349"
@@ -609,7 +646,7 @@ group="emeritus"
 
 displayname="Owens, Joseph"
 web = "http://web2.physics.fsu.edu/~owens/bio.html"
-title="Professor"
+title="Emeritus Professor"
 room="506 KEN"
 phone="4-4765"
 email="owens@hep.fsu.edu"
@@ -636,7 +673,7 @@ email="robson@csit.fsu.edu"
 group="emeritus"
 
 displayname="Schlottmann, Pedro"
-title="Professor"
+title="Emeritus Professor"
 room="412 KEN"
 phone="4-0055"
 email="schlottmann@physics.fsu.edu"
@@ -666,7 +703,7 @@ group="emeritus"
 
 displayname="von Moln&aacute;r, Stephan"
 image="vonMolnarStephan2.png"
-title="Professor"
+title="Emeritus Professor"
 room="406 KEN"
 phone="4-5075"
 email="molnar@physics.fsu.edu"
@@ -718,6 +755,7 @@ group = "postdocs"
 
 
 displayname="Rotti, Aditya"
+research_area = "Astrophysics"
 title=Postdoctoral Fellow
 room="&nbsp;"
 phone="&nbsp;"
