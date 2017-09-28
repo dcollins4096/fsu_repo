@@ -136,7 +136,7 @@
                         <h4>Email</h4>
                         </td>
                     </tr>
-                    {%for f in faculty%}
+                    {%for f in all_people['faculty']%}
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
                         <td class="c1" valign="top">{{f.name_and_link}}</a></td>
@@ -182,7 +182,7 @@
                         </td>
                     </tr>
                     <tr>
-                    {%for f in teaching_faculty%}
+                    {%for f in all_people['teaching_faculty']%}
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
                         <td class="c1" valign="top">{{f.name_and_link}}</a></td>
@@ -228,7 +228,7 @@
                         <h4>Email</h4>
                         </td>
                     </tr>
-                    {%for f in research_faculty%}
+                    {%for f in all_people['research_faculty']%}
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
                         <td class="c1" valign="top">{{f.name_and_link}}</a></td>
@@ -273,7 +273,7 @@
                         <h4>Email</h4>
                         </td>
                     </tr>
-                    {%for f in nonr_fac%}
+                    {%for f in all_people['nonr_fac']%}
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
                         <td class="c1" valign="top">{{f.name_and_link}}</a></td>
@@ -318,7 +318,7 @@
                         <h4>Email</h4>
                         </td>
                     </tr>
-                    {%for f in emeritus%}
+                    {%for f in all_people['emeritus']%}
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
                         <td class="c1" valign="top">{{f.name_and_link}}</a></td>
@@ -363,7 +363,7 @@
                         <h4>Email</h4>
                         </td>
                     </tr>
-                    {%for f in postdocs%}
+                    {%for f in all_people['postdocs']%}
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
                         <td class="c1" valign="top">{{f.name_and_link}}</a></td>
@@ -411,7 +411,7 @@
                         <h4>Email</h4>
                         </td>
                     </tr>
-                    {%for f in staff%}
+                    {%for f in all_people['staff']%}
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
                         <td class="c1" valign="top">{{f.name_and_link}}</a></td>

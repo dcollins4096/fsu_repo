@@ -3,6 +3,13 @@
 import jinja2
 import pdb
 import glob
+
+from optparse import OptionParser
+parser = OptionParser("python makepeople.py <options> \n\tmakes the people page.  Maybe does other stuff.")
+parser.add_option("-l", "--local_images", dest="local_images", help="Uses local images to make sure things work.",
+                  action = "store_true", default = False)
+(options, args) = parser.parse_args()
+
 ef = execfile
 def no_whites(something):
     """Removes any empty charachters"""
@@ -66,11 +73,31 @@ class person():
 
 
 #set up.
-all_people = {} #dictionary of groups
 fptr = open("faculty_list.txt","r")
 lines=fptr.readlines()
 fptr.close()
 stuff = {} #temp storage for parsing
+
+class people():
+    def __init__(self):
+        self.people_by_group={}
+        self.research_areas=[]
+        self.groups = []
+    def add_to_group(self,group,person):
+        if group not in self.groups:
+            self.people_by_group[group]=[]
+            self.groups.append(group)
+        self.people_by_group[group].append(person)
+    def sort_groups(self):
+        for group in self.people_by_group.keys():
+            self.people_by_group[group] = sorted(self.people_by_group[group],key=lambda x: x.displayname)
+
+    def __getitem__(self,item):
+        if item in self.groups:
+            return self.people_by_group[item]
+
+all_people=people()
+"""for later: https://nationalmaglab.org/research/publications-all"""
 
 for line in lines:
 
@@ -95,13 +122,11 @@ for line in lines:
             withus =  eval(stuff['withus'])
         if stuff.has_key('displayname') and withus:
             this_group = stuff.get('group','Oops') 
-            this_list = all_people.get(this_group,[])
-            stuff['local_image']=False
+            stuff['local_image']=options.local_images
 
-            this_list.append(person(**stuff)) # **stuff unrolls to key=value pairs for functions
-            all_people[this_group] = this_list
+            all_people.add_to_group(this_group,person(**stuff)) # **stuff unrolls to key=value pairs for functions
         stuff={}
-
+all_people.sort_groups()
 if 1:
     #set up the template.
     loader=jinja2.FileSystemLoader('.')
@@ -112,7 +137,7 @@ if 1:
     #push the people into the template.
     fname = 'people.html' #%npeople
     foutptr = open(fname,'w')
-    foutptr.write( template.render(**all_people) )
+    foutptr.write( template.render(all_people=all_people) )
     foutptr.close()
     print "wrote", fname
 
