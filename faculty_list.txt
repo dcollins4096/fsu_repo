@@ -14,6 +14,7 @@
 #other  (other notes; totally ignored)
 #image  (name of image file.  If blank, LastFirst.png is assumed)
 #withus (if False, the person is omitted from the page)
+#research_area
 #group  (in the above, must be last)
 #
 #Note that nothing actually needs quotes. Double quotes are removed.
@@ -56,6 +57,7 @@ title="Assistant Professor"
 room="418 KEN"
 phone="5-0975 KEN, 4-5993 MAG"
 email="beekman@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group = "faculty"
 
 
@@ -64,6 +66,7 @@ web="http://web2.physics.fsu.edu/~berg/bio.html"
 title="Professor"
 room="615 KEN"
 phone="4-6246"
+research_area = "High Energy Theory"
 email="berg@hep.fsu.edu"
 group = "faculty"
 
@@ -83,6 +86,7 @@ web="http://web2.physics.fsu.edu/~boebinger/bio.html"
 title="Professor"
 room="B204 MAG"
 phone="4-0851"
+research_area =  "Condensed Matter Experiment"
 email="gsb@magnet.fsu.edu"
 group = "faculty"
 
@@ -92,6 +96,7 @@ web="http://web2.physics.fsu.edu/~bonesteel/bio.html"
 title="Professor&amp; Associate Chair"
 room="410 KEN"
 phone="4-2516"
+research_area =  "Condensed Matter Theory"
 email="bonestee@magnet.fsu.edu"
 group = "faculty"
 
@@ -102,11 +107,13 @@ title="Professor"
 room="A309A MAG"
 phone="4-0527"
 email="jcao@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group = "faculty"
 
 
 displayname="Capstick, Simon"
 web="http://web2.physics.fsu.edu/~capstick/bio.html"
+research_area = "Hadronic"
 title="Professor"
 room="207 KEN"
 phone="4-1724"
@@ -120,6 +127,7 @@ title="Professor"
 room="703-b KEN"
 phone="4-3414"
 email="ic@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group = "faculty"
 
 
@@ -144,6 +152,7 @@ group = "faculty"
 
 
 displayname="Crede, Volker"
+research_area = "Hadronic"
 web="http://web2.physics.fsu.edu/~crede/bio.html"
 title="Professor"
 room="212 KEN"
@@ -153,6 +162,7 @@ group = "faculty"
 
 
 displayname="Dobbs, Sean"
+research_area = "Hadronic"
 email="sdobbs@fsu.edu"
 room="206 KEN"
 phone="5-3812"
@@ -166,6 +176,7 @@ title="Professor"
 room="611 KEN"
 phone="4-9755, 4-5693"
 email="vlad@magnet.fsu.edu"
+research_area =  "Condensed Matter Theory"
 group = "faculty"
 
 
@@ -175,10 +186,13 @@ title="Professor"
 room="617 KEN"
 phone="4-0175"
 email="dduke@csit.fsu.edu"
+research_area = None
+other = "perhaps research area should be Theoretical Physics?"
 group = "faculty"
 
 
 displayname="Eugenio, Paul"
+research_area = "Hadronic"
 web="http://web2.physics.fsu.edu/~eugenio/bio.html"
 title="Professor"
 room="205 KEN"
@@ -188,6 +202,7 @@ group = "faculty"
 
 
 displayname="Gao, Hanwei"
+research_area =  "Condensed Matter Experiment"
 web="http://web2.physics.fsu.edu/~gao/bio.html"
 title="Assistant Professor"
 room="407 KEN,"
@@ -203,6 +218,7 @@ title="Professor"
 room="B206 MAG"
 phone="4-1466"
 email="lhgreene@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group = "faculty"
 
 
@@ -212,6 +228,7 @@ title="Professor"
 room="310 KEN"
 phone="5-8793"
 email="shill@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group = "faculty"
 
 
@@ -261,6 +278,7 @@ title="Associate Professor"
 room="405 KEN"
 phone="4-1576"
 email="lind@physics.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group = "faculty"
 
 
@@ -270,6 +288,7 @@ title="Professor"
 room="612 KEN"
 phone="4-3713"
 email="stratos@physics.fsu.edu"
+research_area =  "Condensed Matter Theory"
 group = "faculty"
 
 
@@ -289,6 +308,8 @@ title="Associate Professor"
 room="416 KEN"
 phone="4-4558"
 email="ng@physics.fsu.edu"
+research_area = None
+other = "Personal page says condensed matter.  He's not on that page, though..."
 group = "faculty"
 
 
@@ -298,6 +319,7 @@ title="Associate Professor"
 room="511 KEN"
 phone="4-3523"
 email="okui@hep.fsu.edu"
+research_area = "High Energy Theory"
 group = "faculty"
 
 
@@ -307,6 +329,7 @@ title="Professor"
 room="204 KEN"
 phone="4-6344"
 email="jpiekarewicz@fsu.edu"
+research_area = "Nuclear Theory"
 group = "faculty"
 
 
@@ -326,6 +349,7 @@ title="Professor"
 room="510 KEN"
 phone="4-9282"
 email="reina@hep.fsu.edu"
+research_area = "High Energy Theory"
 group = "faculty"
 
 
@@ -335,6 +359,7 @@ title="Professor"
 room="413 KEN"
 phone="4-6814"
 email="prikvold@fsu.edu"
+research_area =  "Condensed Matter Theory"
 group = "faculty"
 
 
@@ -354,6 +379,7 @@ title="Professor"
 room="605 KEN"
 phone="4-2223"
 email="wroberts@fsu.edu"
+research_area = "Nuclear Theory"
 group = "faculty"
 
 
@@ -373,6 +399,7 @@ title="Professor"
 room="309 KEN"
 phone="4-4391"
 email="vafek@magnet.fsu.edu"
+research_area =  "Condensed Matter Theory"
 group = "faculty"
 
 
@@ -392,6 +419,7 @@ title="Associate Professor"
 room="311 KEN"
 phone="4-1804"
 email="volya@physics.fsu.edu"
+research_area = "Nuclear Theory"
 group = "faculty"
 
 
@@ -421,6 +449,7 @@ title="Professor"
 room="409 KEN"
 phone="4-5849"
 email="xiong@physics.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group = "faculty"
 
 
@@ -430,6 +459,7 @@ title="Professor"
 room="404 KEN"
 phone="4-5373"
 email="kunyang@magnet.fsu.edu"
+research_area =  "Condensed Matter Theory"
 group = "faculty"
 
 
@@ -466,6 +496,7 @@ title = "Assistant Research Professor"
 room = "A319 MAG"
 email="baumbach@magnet.fsu.edu"
 phone = "4-2836"
+research_area =  "Condensed Matter Experiment"
 group="research_faculty"
 
 
@@ -474,6 +505,8 @@ title="Research Faculty III"
 room="116 NRB"
 phone="4-5598"
 email="lbaby@fsu.edu"
+research_area = "Nuclear Experiment"
+other = "check research area"
 group="research_faculty"
 
 displayname="Balicas, Luis"
@@ -481,6 +514,7 @@ title="Research Professor"
 room="A3145 MAG"
 phone="4-4201"
 email="balicas@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group="research_faculty"
 
 displayname="Caussyn, David"
@@ -488,6 +522,7 @@ title="Research Faculty II"
 room="209 NRB"
 phone="4-6209"
 email = "caussyn@nucmar.physics.fsu.edu"
+research_area = "Nuclear Experiment"
 group="research_faculty"
 
 displayname="Choi, Eun Sang"
@@ -495,6 +530,8 @@ title="Research Faculty II"
 room="A-121B MAG"
 phone="4-1055"
 email = "echoi@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
+other = "check research area"
 group="research_faculty"
 
 displayname="Frawley, Anthony"
@@ -503,6 +540,7 @@ title="Research Faculty III"
 room="210 KEN"
 phone="4-4034"
 email = "afrawley@fsu.edu"
+research_area = "Nuclear Experiment"
 group="research_faculty"
 
 displayname="Green, Bill"
@@ -518,11 +556,14 @@ title="Distinguished University Scholar (Research Faculty III)"
 room="A-109D MAG"
 phone="4-216"
 email = "sth@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
+other = "check research area"
 group="research_faculty"
 
-displayname = "Martinez, German:
+displayname = "Martinez, German"
 title = "Research Faculty I"
 email = "grmartinez@fsu.edu"
+research_area = "High Energy Experiment"
 group="research_faculty"
 
 displayname = "Myers, Edmund"
@@ -539,6 +580,8 @@ title="Research Professor"
 room="A309b MAG"
 phone=4-3913"
 email = "dragana@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
+other = "check research area"
 group="research_faculty"
 
 displayname = "Smirnov, Dmitry"
@@ -546,6 +589,8 @@ title="Senior Scientist"
 room="A121A MAG"
 phone="4-5399"
 email = "smirnov@magnet.fsu.edu"
+research_area =  "Condensed Matter Experiment"
+other = "check research area"
 group="research_faculty"
 
 displayname = "Tripathi, Vandana"
@@ -553,6 +598,8 @@ title = "Research Faculty II"
 room="218 KEN"
 phone=""
 email = "tripathi@nucmar.physics.fsu.edu"
+research_area = "Nuclear Experiment"
+other = "check research area"
 group="research_faculty"
 
 displayname="Johnson, Kurtis"
@@ -568,24 +615,32 @@ title="Scientific Research Specialist"
 room="105A KEN"
 phone="4-3456"
 email = "lochner@physics.fsu.edu"
+other = "check research area"
 group = "nonr_fac"
+
 displayname="Reyes, Barbara"
 title="Instructional Speciallist II"
 room="111 UPL"
 phone="4-6822"
 email = "breyes@physics.fsu.edu"
+research_area = "Teaching specialist"
 group = "nonr_fac"
+
+
 displayname="Schmidt, Brian"
 title="Associate in Research"
 room="106 NRB"
 phone="4-1223"
 email = "schmidt@fsunuc.physics.fsu.edu"
+other = "check research area"
 group = "nonr_fac"
+
 displayname="Spingler, David"
 title="Associate in Research"
 room="31 NRB"
 phone="4-1191"
 email = "spingler@nucmar.physics.fsu.edu"
+other = "check research area"
 group = "nonr_fac"
 
 displayname="Albright, John"
@@ -594,11 +649,13 @@ room="&nbsp;"
 phone="&nbsp;"
 email="jraphysics@aol.com"
 group="emeritus"
+
 displayname="Desloge, Edward"
 title="Emeritus Professor"
 room="&nbsp;"
 phone="&nbsp;"
 group="emeritus"
+
 displayname="Fletcher, Neil"
 title="Emeritus Professor"
 room="&nbsp;"
@@ -677,6 +734,7 @@ title="Emeritus Professor"
 room="412 KEN"
 phone="4-0055"
 email="schlottmann@physics.fsu.edu"
+research_area =  "Condensed Matter Theory"
 group="emeritus"
 
 displayname="Schrieffer, Robert"
@@ -684,6 +742,7 @@ title="Emeritus Professor"
 room="a307 MAG"
 phone="4-3203"
 email="schrieff@magnet.fsu.edu"
+research_area =  "Condensed Matter Theory"
 group="emeritus"
 
 displayname="Skofronick, James"
@@ -691,6 +750,7 @@ title="Emeritus Professor"
 room="&nbsp;"
 phone="&nbsp;"
 email="skofronick@phy.fsu.edu"
+research_area = "Nuclear Experiment"
 group="emeritus"
 
 displayname="Testardi, Louis"
@@ -707,6 +767,7 @@ title="Emeritus Professor"
 room="406 KEN"
 phone="4-5075"
 email="molnar@physics.fsu.edu"
+research_area =  "Condensed Matter Experiment"
 group="emeritus"
 
 
@@ -723,6 +784,14 @@ room="NRB 119"
 phone="&nbsp;"
 group = "postdocs"
 
+displayname="Ostrovidov, Alexander"
+title = "Research Physicist"
+room="1-14 NRB"
+phone = "4-6226"
+email = "aostrovidov@fsu.edu "
+web = "http://hadron.physics.fsu.edu/~ostrov/"
+research_area = "Hadronic"
+group="research_faculty"
 
 displayname="Lai, Hsin-Hua"
 title="Postdoctoral Fellow"
@@ -777,6 +846,13 @@ email="sur@magnet.fsu.edu"
 title=Postdoctoral Fellow
 group="postdocs"
 
+displayname="Barber, Powell"
+title="Technical/Research Designer"
+room="037 NRB"
+phone="4-6477"
+email="pbarber@fsu.edu"
+group="staff"
+
 displayname="Aragon, Jason"
 title="Technical/Research Designer"
 room="45 NRB"
@@ -784,12 +860,6 @@ phone="4-6734"
 email="aragon@physics.fsu.edu"
 group = "staff"
 
-displayname="Barber, Powell"
-title="Technical/Research Designer"
-room="037 NRB"
-phone="4-6477"
-email="pbarber@fsu.edu"
-group="staff"
 
 displayname="Baxter, Scott"
 title="Publications/Graphics Artist"
@@ -893,6 +963,7 @@ displayname="Shaw-Hall, Laticia"
 title="Administrative Assistant"
 room="315 KEN"
 phone="4-2868"
+group="staff"
 
 displayname="Smith, Randall"
 title="Technical/Research Designer"
