@@ -8,6 +8,10 @@ from optparse import OptionParser
 parser = OptionParser("python makepeople.py <options> \n\tmakes the people page.  Maybe does other stuff.")
 parser.add_option("-l", "--local_images", dest="local_images", help="Uses local images to make sure things work.",
                   action = "store_true", default = False)
+parser.add_option("-r", "--research_area", dest="research_area", help="Return a list of all people associated with a research area.",
+                  action = "store", default = None)
+parser.add_option("-p", "--page_skip", dest="page_skip", help="skip making the page.",
+                  action = "store_true", default = False)
 (options, args) = parser.parse_args()
 
 ef = execfile
@@ -38,6 +42,7 @@ class person():
         self.email       =email
         self.web        =web
         self.group = group
+        self.research_area = research_area
         if self.web is not None:
             self.name_and_link = '<a href="%s" target="_self">%s</a>'%(self.web,self.displayname)
         else:
@@ -70,6 +75,8 @@ class person():
             self.email=send_email
             self.sendemail=send_email
             self.showemail=show_email
+    def get_name(self):
+        return self.displayname
 
 
 #set up.
@@ -88,13 +95,25 @@ class people():
             self.people_by_group[group]=[]
             self.groups.append(group)
         self.people_by_group[group].append(person)
+        if person.research_area not in self.research_areas:
+            self.research_areas.append(person.research_area)
+
     def sort_groups(self):
         for group in self.people_by_group.keys():
             self.people_by_group[group] = sorted(self.people_by_group[group],key=lambda x: x.displayname)
 
+
     def __getitem__(self,item):
+        output = []
         if item in self.groups:
-            return self.people_by_group[item]
+            output= self.people_by_group[item]
+        elif item in self.research_areas:
+            for group in self.people_by_group.keys():
+                for person in self.people_by_group[group]:
+                    if person.research_area == item:
+                        output.append(person)
+            output = sorted(output,key=lambda x:x.displayname)
+        return output
 
 all_people=people()
 """for later: https://nationalmaglab.org/research/publications-all"""
@@ -127,7 +146,10 @@ for line in lines:
             all_people.add_to_group(this_group,person(**stuff)) # **stuff unrolls to key=value pairs for functions
         stuff={}
 all_people.sort_groups()
-if 1:
+if options.research_area is not None:
+    for person in all_people[options.research_area]:
+        print person.get_name()
+if options.page_skip is False:
     #set up the template.
     loader=jinja2.FileSystemLoader('.')
     env = jinja2.Environment(loader=loader)
