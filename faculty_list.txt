@@ -137,7 +137,7 @@ web="http://astrophysics.physics.fsu.edu/~dcollins/"
 title="Assistant Professor"
 room="604 KEN"
 phone="5-0689"
-email="dccollins@physics.fsu.edu"
+email="dccollins@fsu.edu"
 group = "faculty"
 
 
@@ -162,6 +162,8 @@ group = "faculty"
 
 
 displayname="Dobbs, Sean"
+web = http://web2.physics.fsu.edu/~dobbs/bio.html
+other=http://hadron.physics.fsu.edu/~sdobbs/
 research_area = "Hadronic"
 email="sdobbs@fsu.edu"
 room="206 KEN"
@@ -667,7 +669,7 @@ displayname="Hagopian, Sharon"
 research_area = "High Energy Experiment"
 title="Emeritus Physicist"
 room="620 KEN"
-phone="4-4777"
+phone="4-3734"
 email="hagopian@hep.fsu.edu"
 group="emeritus"
 

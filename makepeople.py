@@ -3,6 +3,8 @@
 import jinja2
 import pdb
 import glob
+import numpy as np
+nar = np.array
 
 from optparse import OptionParser
 parser = OptionParser("python makepeople.py <options> \n\tmakes the people page.  Maybe does other stuff.")
@@ -43,6 +45,7 @@ class person():
         self.web        =web
         self.group = group
         self.research_area = research_area
+        self.email_domain=''
         if self.web is not None:
             self.name_and_link = '<a href="%s" target="_self">%s</a>'%(self.web,self.displayname)
         else:
@@ -72,7 +75,8 @@ class person():
             domain = '"%s"'%p1[1]
             send_email = "href='javascript:send(%s,%s,%s)'"%(name,addy,domain)
             show_email = "href='javascript:show(%s,%s,%s)'"%(name,addy,domain)
-            self.email=send_email
+            self.email_domain = domain
+            #self.email=send_email
             self.sendemail=send_email
             self.showemail=show_email
     def get_name(self):
@@ -90,6 +94,11 @@ class people():
         self.people_by_group={}
         self.research_areas=[]
         self.groups = []
+    def return_all_people(self):
+        all_people = []
+        for group in self.people_by_group.keys():
+            all_people+=self.people_by_group[group]
+        return all_people
     def add_to_group(self,group,person):
         if group not in self.groups:
             self.people_by_group[group]=[]
@@ -146,6 +155,14 @@ for line in lines:
             all_people.add_to_group(this_group,person(**stuff)) # **stuff unrolls to key=value pairs for functions
         stuff={}
 all_people.sort_groups()
+
+def physics_email_hunt(all_people):
+    ap = nar(all_people.return_all_people())
+    b = nar([a.email_domain.strip('"') =='physics.fsu.edu' for a in ap])
+    still_old = ap[b]
+    for p in still_old:
+        print p.displayname #, p.email
+physics_email_hunt(all_people)
 if options.research_area is not None:
     for person in all_people[options.research_area]:
         print person.get_name()
