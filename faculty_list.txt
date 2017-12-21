@@ -791,6 +791,12 @@ research_area =  "Condensed Matter Experiment"
 group="emeritus"
 
 
+displayname="Ashall, Chris"
+title="Postdoctoral Fellow"
+#room="NRB 119"
+phone="&nbsp;"
+email="cashall@fsu.edu"
+group = "postdocs"
 
 displayname="Chen, Li"
 title="Postdoctoral Fellow"
@@ -914,6 +920,14 @@ title="Administrative Associate"
 room="313 KEN"
 phone="5-9212"
 email="mbravo@physics.fsu.edu"
+withus=False
+group="staff"
+
+displayname="Tettey, Akilah"
+title="Administrative Associate"
+room="313 KEN"
+phone="5-9212"
+email="atettey@fsu.edu"
 group="staff"
 
 displayname="Brown, Greg"
