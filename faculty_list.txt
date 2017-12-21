@@ -12,7 +12,7 @@
 #email  (in a format you would send, it gets parsed)
 #web    (web page)
 #other  (other notes; totally ignored)
-#other_email (other addresses"
+#other_email (other addresses)
 #image  (name of image file.  If blank, LastFirst.png is assumed)
 #withus (if False, the person is omitted from the page)
 #research_area
@@ -87,6 +87,7 @@ displayname="Boebinger, Gregory"
 web="http://web2.physics.fsu.edu/~boebinger/bio.html"
 title="Professor"
 room="B204 MAG"
+image="BobingerGreg.jpg"
 phone="4-0851"
 research_area =  "Condensed Matter Experiment"
 email="gsb@magnet.fsu.edu"
@@ -128,6 +129,7 @@ web="http://web2.physics.fsu.edu/~chiorescu/bio.html"
 title="Professor"
 room="703-b KEN"
 phone="4-3414"
+image="ChiorescuIrinel_0.jpg"
 email="ic@magnet.fsu.edu"
 research_area =  "Condensed Matter Experiment"
 group = "faculty"
@@ -588,13 +590,13 @@ phone="4-4040"
 email="myers@nucmar.physics.fsu.edu"
 group="research_faculty"
 
-displayname = "Popovic, Dragana"
+displayname = "Popovic, Dragana
+web = "https://nationalmaglab.org/component/maglabdata/?view=personnel&id=DraganaPopovic"
 title="Research Professor"
 room="A309b MAG"
 phone=4-3913"
 email = "dragana@magnet.fsu.edu"
 research_area =  "Condensed Matter Experiment"
-web = " https://nationalmaglab.org/component/maglabdata/?view=personnel&id=DraganaPopovic"
 other = "check research area"
 group="research_faculty"
 

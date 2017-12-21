@@ -133,11 +133,15 @@ for line in lines:
 
     #sanatize any key=value pairs, store them temporarily in stuff
     spl = line.split("=") 
-    if len(spl) != 2:
+    if len(spl) < 2:
         continue
     key = spl[0].strip().strip('"')
-    val = spl[1].strip().strip('"')
+    #val = line[spl[1].strip().strip('"')
+    val = line[line.index('=')+1:].strip().strip('"')
 
+    if stuff.has_key('displayname'):
+        if stuff['displayname'] == "Popovic, Dragana":
+            print line
     #check for parsing.
     if key in ['research_area','displayname','title','room','phone','email','web','group', 'other','image','withus', 'other_email']:
         stuff[key]=val
