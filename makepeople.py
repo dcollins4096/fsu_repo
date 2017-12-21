@@ -30,7 +30,7 @@ def no_whites(something):
 class person():
     def __init__(self, displayname=None,
             image=None,title="",room="",phone="",email=None,web=None,group=None,
-            research_area=None, other=None,
+            research_area=None, other=None, other_email=None,
             local_image=False):
         self.displayname=displayname
         self.image      =image
@@ -46,6 +46,8 @@ class person():
         self.group = group
         self.research_area = research_area
         self.email_domain=''
+        self.other = other
+        self.other_email=other_email
         if self.web is not None:
             self.name_and_link = '<a href="%s" target="_self">%s</a>'%(self.web,self.displayname)
         else:
@@ -137,7 +139,7 @@ for line in lines:
     val = spl[1].strip().strip('"')
 
     #check for parsing.
-    if key in ['research_area','displayname','title','room','phone','email','web','group', 'other','image','withus']:
+    if key in ['research_area','displayname','title','room','phone','email','web','group', 'other','image','withus', 'other_email']:
         stuff[key]=val
     else:
         print "Unknown keyword ", line
@@ -162,7 +164,9 @@ def physics_email_hunt(all_people):
     still_old = ap[b]
     for p in still_old:
         print p.displayname #, p.email
-physics_email_hunt(all_people)
+#physics_email_hunt(all_people)
+
+
 if options.research_area is not None:
     for person in all_people[options.research_area]:
         print person.get_name()
@@ -178,5 +182,15 @@ if options.page_skip is False:
     foutptr = open(fname,'w')
     foutptr.write( template.render(all_people=all_people) )
     foutptr.close()
-    print "wrote", fname
+    print "wrote new starter page:", fname
+    print "To do:  Edit people page."
+    print "        COPY people page."
+    print "        pbpaste > current_page_2.html"
+    print "        vimdiff current_page.html, current_page_2.html"
+    print "        THEY SHOULD BE THE SAME, otherwise ingest the differences"
+    print "        cat people.html |pbcopy"
+    print "        paste into editor window."
+    print "        Save as draft, edit, copy, pbpaste current_page_3, diff."
+    print "        check in current_page_3 as current_page."
+    print "        check in all other changes."
 
