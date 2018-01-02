@@ -17,7 +17,16 @@
 #withus (if False, the person is omitted from the page)
 #research_area
 #group  (in the above, must be last)
-#
+#Template
+#displayname = 
+#image = 
+#title=
+#room=
+#phone=
+#email=
+#web=
+#research_area = 
+#group = 
 #Note that nothing actually needs quotes. Double quotes are removed.
 
 
@@ -793,7 +802,7 @@ group="emeritus"
 
 displayname="Ashall, Chris"
 title="Postdoctoral Fellow"
-#room="NRB 119"
+room="703-D"
 phone="&nbsp;"
 email="cashall@fsu.edu"
 group = "postdocs"
@@ -1054,3 +1063,13 @@ room="305 Keen</td>
 phone="4-4473</td>
 email="fky11@fsu.edu"
 group="staff"
+
+displayname = "Langhorne, Gynell"
+#image = 
+title= "IT Support Specialist"
+room= 403 Keen
+#phone=
+email= glanghorne@fsu.edu
+#web=
+#research_area = 
+group = "staff"
