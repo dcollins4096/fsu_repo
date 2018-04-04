@@ -122,6 +122,14 @@ email="jcao@magnet.fsu.edu"
 research_area =  "Condensed Matter Experiment"
 group = "faculty"
 
+displayname="Chinglani, Hitesh"
+#web=""
+research_area = "Condensed Matter Theory"
+title="Assistant Professor"
+#room=""
+#phone=""
+#email=""
+group = "faculty"
 
 displayname="Capstick, Simon"
 web="http://web2.physics.fsu.edu/~capstick/bio.html"
@@ -436,7 +444,7 @@ group = "faculty"
 
 displayname="Volya, Alexander"
 web="http://web2.physics.fsu.edu/~volya/bio.html"
-title="Associate Professor"
+title="Professor"
 room="311 KEN"
 phone="4-1804"
 email="volya@physics.fsu.edu"
@@ -566,9 +574,10 @@ email = "afrawley@fsu.edu"
 research_area = "Nuclear Experiment"
 group="research_faculty"
 
-displayname="Green, Bill"
+displayname="Green, William"
 research_area = "Astrophysics"
 title="Research Professor"
+image="GreenBill.jpg"
 room="607 KEN"
 phone=""
 email="whgreen@fsu.edu"
@@ -799,6 +808,13 @@ other_email="molnar@physics.fsu.edu"
 research_area =  "Condensed Matter Experiment"
 group="emeritus"
 
+displayname="Lersch, Daniel"
+web="http://hadron.physics.fsu.edu/"
+title="Postdoctoral Fellow"
+#room="703-D"
+#phone="&nbsp;"
+email="dlersch@jlab.org"
+group = "postdocs"
 
 displayname="Ashall, Chris"
 title="Postdoctoral Fellow"
@@ -1068,7 +1084,7 @@ displayname = "Langhorne, Gynell"
 #image = 
 title= "IT Support Specialist"
 room= 403 Keen
-#phone=
+phone=5-4067
 email= glanghorne@fsu.edu
 #web=
 #research_area = 
