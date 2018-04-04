@@ -16,7 +16,6 @@ parser.add_option("-p", "--page_skip", dest="page_skip", help="skip making the p
                   action = "store_true", default = False)
 (options, args) = parser.parse_args()
 
-ef = execfile
 def no_whites(something):
     """Removes any empty charachters"""
     out = ""
@@ -69,7 +68,7 @@ class person():
             try:
                 is_formed_right = self.email.index("@")
             except:
-                print "Email error", self.displayname
+                print("Email error", self.displayname)
 
             name = '"%s %s"'%(names[1],names[0])
             p1 = self.email.split("@")
@@ -98,7 +97,7 @@ class people():
         self.groups = []
     def return_all_people(self):
         all_people = []
-        for group in self.people_by_group.keys():
+        for group in list(self.people_by_group.keys()):
             all_people+=self.people_by_group[group]
         return all_people
     def add_to_group(self,group,person):
@@ -110,7 +109,7 @@ class people():
             self.research_areas.append(person.research_area)
 
     def sort_groups(self):
-        for group in self.people_by_group.keys():
+        for group in list(self.people_by_group.keys()):
             self.people_by_group[group] = sorted(self.people_by_group[group],key=lambda x: x.displayname)
 
 
@@ -119,7 +118,7 @@ class people():
         if item in self.groups:
             output= self.people_by_group[item]
         elif item in self.research_areas:
-            for group in self.people_by_group.keys():
+            for group in list(self.people_by_group.keys()):
                 for person in self.people_by_group[group]:
                     if person.research_area == item:
                         output.append(person)
@@ -146,15 +145,15 @@ for line in lines:
     if key in ['research_area','displayname','title','room','phone','email','web','group', 'other','image','withus', 'other_email']:
         stuff[key]=val
     else:
-        print "Unknown keyword ", line
+        print("Unknown keyword ", line)
 
     #we assume that group happens last.  
     #When it appears, injest stuff into a person, add to the appropriate list.
     if key == 'group': 
         withus = True
-        if stuff.has_key('withus'):
+        if 'withus' in stuff:
             withus =  eval(stuff['withus'])
-        if stuff.has_key('displayname') and withus:
+        if 'displayname' in stuff and withus:
             this_group = stuff.get('group','Oops') 
             stuff['local_image']=options.local_images
 
@@ -167,13 +166,13 @@ def physics_email_hunt(all_people):
     b = nar([a.email_domain.strip('"') =='physics.fsu.edu' for a in ap])
     still_old = ap[b]
     for p in still_old:
-        print p.displayname #, p.email
+        print(p.displayname) #, p.email
 #physics_email_hunt(all_people)
 
 
 if options.research_area is not None:
     for person in all_people[options.research_area]:
-        print person.get_name()
+        print(person.get_name())
 if options.page_skip is False:
     #set up the template.
     loader=jinja2.FileSystemLoader('.')
@@ -186,15 +185,15 @@ if options.page_skip is False:
     foutptr = open(fname,'w')
     foutptr.write( template.render(all_people=all_people) )
     foutptr.close()
-    print "wrote new starter page:", fname
-    print "To do:  Edit people page."
-    print "        COPY people page."
-    print "        pbpaste > current_page_2.html"
-    print "        vimdiff current_page.html, current_page_2.html"
-    print "        THEY SHOULD BE THE SAME, otherwise ingest the differences"
-    print "        cat people.html |pbcopy"
-    print "        paste into editor window."
-    print "        Save as draft, edit, copy, pbpaste current_page_3, diff."
-    print "        check in current_page_3 as current_page."
-    print "        check in all other changes."
+    print("wrote new starter page:", fname)
+    print("To do:  Edit people page.")
+    print("        COPY people page.")
+    print("        pbpaste > current_page_2.html")
+    print("        vimdiff current_page.html, current_page_2.html")
+    print("        THEY SHOULD BE THE SAME, otherwise ingest the differences")
+    print("        cat people.html |pbcopy")
+    print("        paste into editor window.")
+    print("        Save as draft, edit, copy, pbpaste current_page_3, diff.")
+    print("        check in current_page_3 as current_page.")
+    print("        check in all other changes.")
 
