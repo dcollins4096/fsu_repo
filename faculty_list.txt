@@ -37,17 +37,17 @@ title= Assistant Professor
 room= 506 KEN
 phone=
 email=kohsaku.tobioka@stonybrook.edu
-web=
+#web=
 research_area = HEP Theory
 group = faculty
 
 displayname = Febres Cordero, Fernando  
 image = 
+#web=
 title=Assistant Professor
 room=
 phone=
 email=ffebres@hep.fsu.edu
-web=
 research_area =  HEP Theory
 group =  faculty
 
