@@ -38,32 +38,37 @@
     <tbody>
         {%for category in category_labels%}
         <tr>
-            <td class="c1" valign="top"><a id="eztoc2009360_0_1" name="eztoc2009360_0_1"></a>
+            <td class="c1" valign="top">
 
                 <h3><a id="{{category}}" name="{{category}}"></a>{{category_labels[category]}}</h3>
 
             <p>Click on name for more information, research summary and further options, and on an e-mail address to send e-mail</p>
 
-            <table border="0" cellpadding="2" cellspacing="0" class="object-left c2" width="950">
+            <table border="0" cellpadding="2" cellspacing="0" class="object-left c2">
                 <tbody>
                     <tr>
-                        <td class="c1" valign="top" width="50"><a id="eztoc2009360_0_1_1" name="eztoc2009360_0_1_1"></a>
-
+                        <td class="c1" valign="top" width="50">
                         <h4>&nbsp;</h4>
                         </td>
-                        <td class="c1" valign="top" width="190"><a id="eztoc2009360_0_1_2" name="eztoc2009360_0_1_2"></a>
+                        <td class="c1" valign="top" width="190">
                         <h4>Name</h4>
                         </td>
-                        <td class="c1" valign="top" width="200"><a id="eztoc2009360_0_1_3" name="eztoc2009360_0_1_3"></a>
+                        <td class="c1" valign="top" width="190">
+                        <h4>Web</h4>
+                        </td>
+                        <td class="c1" valign="top" width="190">
+                        <h4>Research</h4>
+                        </td>
+                        <td class="c1" valign="top" width="200">
                         <h4>Title</h4>
                         </td>
-                        <td class="c1" valign="top" width="90"><a id="eztoc2009360_0_1_4" name="eztoc2009360_0_1_4"></a>
+                        <td class="c1" valign="top" width="90">
                         <h4>Room</h4>
                         </td>
-                        <td class="c1" valign="top" width="180"><a id="eztoc2009360_0_1_5" name="eztoc2009360_0_1_5"></a>
+                        <td class="c1" valign="top" width="90">
                         <h4>Phone</h4>
                         </td>
-                        <td class="c1" valign="top" width="150"><a id="eztoc2009360_0_1_6" name="eztoc2009360_0_1_6"></a>
+                        <td class="c1" valign="top" >
                         <h4>Email</h4>
                         </td>
                     </tr>
@@ -71,6 +76,8 @@
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
                         <td class="c1" valign="top">{{f.name_and_link}}</a></td>
+                        <td class="c1" valign="top">{{f.weblink}}</a></td>
+                        <td class="c1" valign="top">{{f.research_area_web}}</a></td>
                         <td class="c1" valign="top">{{f.title}}</td>
                         <td class="c1" valign="top">{{f.room}}</td>
                         <td class="c1" valign="top">{{f.phone}}</td>

@@ -49,8 +49,10 @@ class person():
         self.other_email=other_email
         if self.web is not None:
             self.name_and_link = '<a href="%s" target="_self">%s</a>'%(self.web,self.displayname)
+            self.weblink = '<a href="%s" target="_blank">web'%(self.web)
         else:
             self.name_and_link = '%s'%self.displayname
+            self.weblink = ''
         if self.displayname is not None:
             names = self.displayname.split(",")
             self.firstname=no_whites(names[1])
