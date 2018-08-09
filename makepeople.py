@@ -183,7 +183,15 @@ if options.page_skip is False:
     #push the people into the template.
     fname = 'people.html' #%npeople
     foutptr = open(fname,'w')
-    foutptr.write( template.render(all_people=all_people) )
+
+    category_labels = {'faculty':'Faculty', 'teaching_faculty':"Teaching Faculty",
+                       'research_faculty':'Research Faculty',
+                       'nonr_fac':'Non-Graduate Faculty',
+                       'emeritus':'Emeritus Faculty',
+                       'postdocs':'Postdoctoral Fellows',
+                       'staff':'Staff'}
+
+    foutptr.write( template.render(all_people=all_people, category_labels=category_labels) )
     foutptr.close()
     print("wrote new starter page:", fname)
     print("To do:  Edit people page.")
