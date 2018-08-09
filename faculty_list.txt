@@ -30,6 +30,27 @@
 #Note that nothing actually needs quotes. Double quotes are removed.
 
 
+
+displayname = "Tobioka, Kohsaku"
+image = 
+title= Assistant Professor
+room= 506 KEN
+phone=
+email=kohsaku.tobioka@stonybrook.edu
+web=
+research_area = HEP Theory
+group = faculty
+
+displayname = Febres Cordero, Fernando  
+image = 
+title=Assistant Professor
+room=
+phone=
+email=ffebres@hep.fsu.edu
+web=
+research_area =  HEP Theory
+group =  faculty
+
 displayname = "Adams, Todd"
 web="http://web2.physics.fsu.edu/~adams/bio.html"
 title="Professor"
@@ -66,7 +87,7 @@ displayname="Beekman, Christianne"
 web="http://web2.physics.fsu.edu/~beekman/bio.html"
 title="Assistant Professor"
 room="418 KEN"
-phone="5-0975 KEN, 4-5993 MAG"
+phone="5-0975<br> 4-5993"
 email="beekman@magnet.fsu.edu"
 research_area =  "Condensed Matter Experiment"
 group = "faculty"
@@ -126,9 +147,9 @@ displayname="Changlani, Hitesh"
 web="http://web2.physics.fsu.edu/~hchanglani/"
 research_area = "Condensed Matter Theory"
 title="Assistant Professor"
-#room=""
-#phone=""
-#email=""
+room=413 KEN
+phone=4-6814
+email=hitesh.changlani@gmail.com
 group = "faculty"
 
 displayname="Capstick, Simon"
@@ -198,7 +219,7 @@ displayname="Dobrosavljevic, Vladimir"
 web="http://web2.physics.fsu.edu/~dobrosavljevic/bio.html"
 title="Professor"
 room="611 KEN"
-phone="4-9755, 4-5693"
+phone="4-9755<br> 4-5693"
 email="vlad@magnet.fsu.edu"
 research_area =  "Condensed Matter Theory"
 group = "faculty"
@@ -383,12 +404,12 @@ group = "faculty"
 
 displayname="Rikvold, Per Arne"
 web="http://web2.physics.fsu.edu/~rikvold/bio.html"
-title="Professor"
-room="413 KEN"
-phone="4-6814"
+title="Emeritus Professor"
+room=
+phone=
 email="prikvold@fsu.edu"
 research_area =  "Condensed Matter Theory"
-group = "faculty"
+group = emeritus
 
 
 displayname="Riley, Mark"
@@ -510,6 +531,7 @@ title="Professor"
 room="419 KLB"
 phone="5-1336"
 email="hzhou4@fsu.edu"
+withus = False
 group = "faculty"
 
 
@@ -567,7 +589,7 @@ group="research_faculty"
 
 displayname="Frawley, Anthony"
 research_area = "Nuclear Experiment"
-title="Research Faculty III"
+title="Research Professor"
 room="210 KEN"
 phone="4-4034"
 email = "afrawley@fsu.edu"
@@ -602,7 +624,7 @@ group="research_faculty"
 displayname = "Myers, Edmund"
 research_area = "Atomic, Molecular and Optical"
 web="http://web2.physics.fsu.edu/~myers/"
-title="Research Faculty III"
+title="Research Professor"
 room="115 NRB"
 phone="4-4040"
 email="myers@nucmar.physics.fsu.edu"
