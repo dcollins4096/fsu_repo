@@ -25,7 +25,7 @@ def no_whites(something):
             out += s
     #print "x"
     return out
-
+import physics_data
 class person():
     def __init__(self, displayname=None,
             image=None,title="",room="",phone="",email=None,web=None,group=None,
@@ -44,6 +44,16 @@ class person():
         self.web        =web
         self.group = group
         self.research_area = research_area
+        self.research_area_web = 'WOAH + %s'%research_area
+
+        if self.research_area is not None:
+            self.research_area_web = ''
+            area_list = [a.strip().strip('"') for a in self.research_area.split(',')]
+            for area in area_list:
+                if area in physics_data.group_info:
+                    stuff=physics_data.group_info[area]
+                    self.research_area_web += '<a = href= %s target="_blank">%s</a><br>'%(stuff['web'],stuff['name'])
+            
         self.email_domain=''
         self.other = other
         self.other_email=other_email
@@ -169,7 +179,7 @@ def physics_email_hunt(all_people):
     still_old = ap[b]
     for p in still_old:
         print(p.displayname) #, p.email
-#physics_email_hunt(all_people)
+physics_email_hunt(all_people)
 
 
 if options.research_area is not None:
