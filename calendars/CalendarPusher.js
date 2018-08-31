@@ -66,7 +66,8 @@ var event = function(this_line,head_line,metaData,sheetPackage){
   this.checkDate = function(dateToCheck){
     //Error checking for dates.  Should get fleshed out more.
     if ( dateToCheck.getTime == undefined ){
-      alert('Poorly Formatted Date');
+      var thisStatus = sheetPackage.getBoxByID( sheetPackage.currentLine, 'Status');
+      thisStatus.setValue('Poorly Formatted Date');SpreadsheetApp.flush();
       this.Errors.push('Date');
     }
     return dateToCheck;
@@ -305,12 +306,16 @@ function CalendarPusher() {
     //continue;
 
     //Check for errors.  Not well fleshed out.
+    var somethingBroke=false;
     for ( var nError = 0; nError < thisEvent.Errors.length; nError++){
       var brokenBox = getBoxByID(i,thisEvent.Errors[nError]);
       brokenBox.setBackground('red');
+      somethingBroke=true;
     }
 
-    if ( thisEvent.Publish== 'stop'){
+    if ( thisEvent.Publish== 'stop' || somethingBroke){
+    testBox.setValue('Something broke.'); 
+    testBox.setBackground('red');
       break;
     }
 
@@ -355,6 +360,25 @@ function CalendarPusher() {
       //thisTestBox.setValue( thisEvent.getCalendarURL() );
 
     }//end publish yes
+    if ( thisEvent.Publish == 'wut' ){  //A PLACE FOR DEBUGGING.
+      if ( thisEvent.CalendarEventID == null ){
+        thisTestBox.setValue('No id, cant query'); SpreadsheetApp.flush();
+        
+      }else{
+        //here we get the URL for the event.
+        // code from https://stackoverflow.com/questions/10553846/get-link-url-to-an-calendar-event-in-google-apps-script/47481173
+        var thisCalendarEvent = calendar.getEventById(thisEvent.CalendarEventID);
+        var newID = thisCalendarEvent.getId();
+        var mycal = metaData['calendar id'];
+        var splitEventId = thisCalendarEvent.getId().split('@');
+        var eventUrl = "https://www.google.com/calendar/event?eid=" + 
+        Utilities.base64Encode(splitEventId[0] + " " + mycal).toString().replace('=','');
+        //thisTestBox.setValue(eventUrl); SpreadsheetApp.flush();
+        thisTestBox.setValue(thisEvent.getStartTime()); SpreadsheetApp.flush();
+      }
+      
+    }// end publish wut
+    
     if ( thisEvent.Publish == 'delete'){
       thisTestBox.setValue( 'Deleting event'); SpreadsheetApp.flush();
       if ( thisEvent.CalendarEventID != null ){
@@ -372,7 +396,9 @@ function CalendarPusher() {
   }
 
   }// main work conditional (0==1)
+  if ( ! somethingBroke ){
   testBox.setValue('Finished.'); testBox.setBackground(null);
+  }
 }
 
 function onOpen(){
