@@ -31,6 +31,7 @@ var valueSelector = function(line, head_line,meta_data){
   general_defaults['Duration'] = 1;
   general_defaults['CalendarEventID']=null;
   general_defaults['Test']='';
+    general_defaults['URL']='';
   var get = function(key){
     var meta_value = meta_data[key];
     var output = general_defaults[key];
@@ -90,6 +91,7 @@ var event = function(this_line,head_line,metaData,sheetPackage){
   this.CalendarEventID   = getValue('CalendarEventID');
   this.TestBoxIndex      =  head_line.indexOf('Alert');
   this.CalendarID        = getValue('calendar id');
+  this.URL               = getValue('URL');
 
   //var thisStatus = sheetPackage.getBoxByID( sheetPackage.currentLine, 'Status');
   //var thisName = sheetPackage.getBoxByID( sheetPackage.currentLine, 'Speaker').getValue();
@@ -321,6 +323,7 @@ function CalendarPusher() {
 
     //Publish, or delete.
     var thisCalendarIdBox = getBoxByID(i,'CalendarEventID');
+    var thisURLBox = getBoxByID(i,'URL');
     thisTestBox.setValue('Unchanged');
 
     if ( thisEvent.Publish == 'yes'){
@@ -355,10 +358,16 @@ function CalendarPusher() {
 
         }
         thisCalendarIdBox.setValue(thisEvent.CalendarEventID);
+        thisURLBox.setValue(thisEvent.getCalendarURL(thisEvent.CalendarEventID,metaData['calendar id']));
       }//makeNewCalendarEvent
       //The url should be done, but doesn't work right now.
       //thisTestBox.setValue( thisEvent.getCalendarURL() );
-
+        var newID = thisCalendarEvent.getId();
+        var mycal = metaData['calendar id'];
+        var splitEventId = thisCalendarEvent.getId().split('@');
+        var eventUrl = "https://www.google.com/calendar/event?eid=" + 
+        Utilities.base64Encode(splitEventId[0] + " " + mycal).toString().replace('=','');
+        thisURLBox.setValue(eventUrl);
     }//end publish yes
     if ( thisEvent.Publish == 'wut' ){  //A PLACE FOR DEBUGGING.
       if ( thisEvent.CalendarEventID == null ){
