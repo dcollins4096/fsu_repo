@@ -36,7 +36,7 @@ image =
 title= Assistant Professor
 room= 506 KEN
 phone=
-email=kohsaku.tobioka@stonybrook.edu
+email=ktobioka@fsu.edu
 #web=
 research_area = "High Energy Theory"
 group = faculty
@@ -1005,6 +1005,7 @@ title="Accounting Representative"
 room="315 KEN"
 phone="644-2894"
 email="mjerrels@fsu.edu"
+withus=False
 group="staff"
 
 displayname="Koetz, Kurt"
@@ -1039,7 +1040,7 @@ displayname="Ryan, Joe"
 title="Systems Administration Manager"
 room="418 KEN"
 phone="4-4539"
-email="joe.ryan.fsu@gmail.com"
+email=jryan@fsu.edu
 group="staff"
 
 displayname="Shaw-Hall, Laticia"
@@ -1062,11 +1063,19 @@ phone="5-7468"
 email="smith@physics.fsu.edu"
 group="staff"
 
+displayname=Ballas, James
+title="Business Manager"
+room="318 KEN"
+phone="4-3404"
+email=jballas@fsu.edu
+group="staff"
+
 displayname="Valdes, Alisabet"
 title="Business Manager"
 room="318 KEN"
 phone="4-6476"
 email="afvaldes@fsu.edu"
+withus=False
 group="staff"
 
 displayname="Whitaker, John"
