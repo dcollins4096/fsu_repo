@@ -757,6 +757,7 @@ title="Emeritus Professor"
 room="MAG"
 phone="4-5247"
 email="moulton@magnet.fsu.edu"
+withus=False
 group="emeritus"
 
 displayname="Owens, Joseph"
@@ -1068,6 +1069,7 @@ title="Business Manager"
 room="318 KEN"
 phone="4-3404"
 email=jballas@fsu.edu
+withus=False
 group="staff"
 
 displayname="Valdes, Alisabet"
@@ -1119,6 +1121,7 @@ title= "IT Support Specialist"
 room= 403 Keen
 phone=5-4067
 email= glanghorne@fsu.edu
+withus=False
 #web=
 #research_area = 
 group = "staff"
