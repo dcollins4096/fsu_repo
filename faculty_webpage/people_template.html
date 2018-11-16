@@ -27,7 +27,7 @@
 <h3>Please click on option below</h3>
 
 <ul>
-    {%for category in category_labels%}
+    {%for category in category_list%}
     <li><a href="#{{category}}" target="_self">{{category_labels[category]}}</a></li>
     {%endfor%}
 	<li><a href="http://web2.physics.fsu.edu/Graduates/Our-Students/">Graduate Students</a></li>
@@ -36,7 +36,7 @@
 
 <table border="0" cellpadding="2" cellspacing="0" class="object-left c3" width="1000">
     <tbody>
-        {%for category in category_labels%}
+        {%for category in category_list%}
         <tr>
             <td class="c1" valign="top">
 

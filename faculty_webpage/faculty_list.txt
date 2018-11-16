@@ -32,12 +32,12 @@
 
 
 displayname = "Tobioka, Kohsaku"
-image = 
+image = TobiokaKohsaku.jpg
 title= Assistant Professor
 room= 506 KEN
-phone=
+phone=4-4765
 email=ktobioka@fsu.edu
-#web=
+web=http://web2.physics.fsu.edu/~tobioka/bio.html
 research_area = "High Energy Theory"
 group = faculty
 
@@ -216,7 +216,8 @@ group="faculty"
 
 
 displayname="Dobrosavljevic, Vladimir"
-web="http://web2.physics.fsu.edu/~dobrosavljevic/bio.html"
+#web="http://web2.physics.fsu.edu/~dobrosavljevic/bio.html"
+web="https://nationalmaglab.org/component/maglabdata?FirstName=vlad&amp;LastName=&amp;WorkingTitle=&amp;Email=&amp;DepartmentCode=&amp;DivisionCode=&amp;ResInterests=&amp;view=personnel&amp;context=search&amp;limitstart=0&amp;submit_button=Search&amp;2ce8fc9fb60eb9e4dce6242f415ff897=1"
 title="Professor"
 room="611 KEN"
 phone="4-9755<br> 4-5693"
