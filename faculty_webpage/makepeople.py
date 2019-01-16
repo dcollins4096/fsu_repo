@@ -6,6 +6,7 @@ import glob
 import numpy as np
 nar = np.array
 
+full_key_list = ['displayname','department','title','room','phone','email', 'other_email','web','group','research_area', 'other','image','withus']
 from optparse import OptionParser
 parser = OptionParser("python makepeople.py <options> \n\tmakes the people page.  Maybe does other stuff.")
 parser.add_option("-l", "--local_images", dest="local_images", help="Uses local images to make sure things work.",
@@ -13,6 +14,12 @@ parser.add_option("-l", "--local_images", dest="local_images", help="Uses local 
 parser.add_option("-r", "--research_area", dest="research_area", help="Return a list of all people associated with a research area.",
                   action = "store", default = None)
 parser.add_option("-p", "--page_skip", dest="page_skip", help="skip making the page.",
+                  action = "store_true", default = False)
+parser.add_option("-t", "--tsv", dest="tsv", help="make a tsv page",
+                  action = "store_true", default = False)
+parser.add_option("-n", "--fname", dest="fname", help="filename",
+                  action = "store", default = "faculty_list.txt")
+parser.add_option("-e", "--email", dest="email", help="Hunt for email addresses that are still physics.fsu.edu",
                   action = "store_true", default = False)
 (options, args) = parser.parse_args()
 
@@ -27,11 +34,15 @@ def no_whites(something):
     return out
 import physics_data
 class person():
-    def __init__(self, displayname=None,
+    def __init__(self, displayname=None,Name=None,
             image=None,title="",room="",phone="",email=None,web=None,group=None,
             research_area=None, other=None, other_email=None,
-            local_image=False):
+            local_image=False,Department=None,withus=""):
         self.displayname=displayname
+        self.withus=withus
+
+        if Name is not None:
+            self.displayname=Name
         self.image      =image
         if local_image:
             image_root = "images"
@@ -44,7 +55,8 @@ class person():
         self.web        =web
         self.group = group
         self.research_area = research_area
-        self.research_area_web = 'WOAH + %s'%research_area
+        self.research_area_web = research_area
+        self.department=Department
 
         if self.research_area is not None:
             self.research_area_web = ''
@@ -57,7 +69,7 @@ class person():
         self.email_domain=''
         self.other = other
         self.other_email=other_email
-        if self.web is not None:
+        if self.web  not in [None,'']:
             self.name_and_link = '<a href="%s" target="_self">%s</a>'%(self.web,self.displayname)
             self.weblink = '<a href="%s" target="_blank">web'%(self.web)
         else:
@@ -76,7 +88,7 @@ class person():
             self.image = "<img alt='%s' height='50' width='50' src='%s/%s'>"%(image_name,image_root,image_name)
         else:
             self.image = "&nbsp;"
-        if self.email is not None:
+        if self.email not in [None,'']:
             try:
                 is_formed_right = self.email.index("@")
             except:
@@ -94,13 +106,17 @@ class person():
             self.showemail=show_email
     def get_name(self):
         return self.displayname
+    def to_tsv(self):
+        output = ""
+        for key in full_key_list:
+            value = self.__dict__.get(key,"")
+            if value is None:
+                value = ""
+            output += value + "\t"
+        output += "\n"
+        return output
 
 
-#set up.
-fptr = open("faculty_list.txt","r")
-lines=fptr.readlines()
-fptr.close()
-stuff = {} #temp storage for parsing
 
 class people():
     def __init__(self):
@@ -112,6 +128,15 @@ class people():
         for group in list(self.people_by_group.keys()):
             all_people+=self.people_by_group[group]
         return all_people
+    def to_tsv(self, fname = 'people.tsv'):
+        all_people = []
+        fptr = open(fname,'w')
+        nkey=len(full_key_list)
+        fptr.write( "%s\t"*nkey%tuple(full_key_list)+"\n")
+        for group in list(self.people_by_group.keys()):
+            for person in self.people_by_group[group]:
+                fptr.write( person.to_tsv() )
+        fptr.close()
     def add_to_group(self,group,person):
         if group not in self.groups:
             self.people_by_group[group]=[]
@@ -123,6 +148,47 @@ class people():
     def sort_groups(self):
         for group in list(self.people_by_group.keys()):
             self.people_by_group[group] = sorted(self.people_by_group[group],key=lambda x: x.displayname)
+    def parse_text_file(self,fname="faculty_list.txt"):
+        fptr = open(fname,"r")
+        lines=fptr.readlines()
+        fptr.close()
+        stuff = {} #temp storage for parsing
+        for line in lines:
+            if line[0] == '#':
+                continue
+            spl = line.split("=") 
+            if len(spl) < 2:
+                continue
+            key = spl[0].strip().strip('"')
+            val = line[line.index('=')+1:].strip().strip('"')
+            if key in full_key_list:
+                stuff[key]=val
+            else:
+                print("Unknown keyword ", line)
+            if key == 'group': 
+                withus = True
+                if 'withus' in stuff:
+                    withus =  eval(stuff['withus'])
+                if 'displayname' in stuff and withus:
+                    this_group = stuff.get('group','Oops') 
+                    stuff['local_image']=options.local_images
+
+                    self.add_to_group(this_group,person(**stuff)) # **stuff unrolls to key=value pairs for functions
+                stuff={}
+        self.sort_groups()
+    def parse_tsv(self,fname = 'full_list.tsv'):
+        fptr = open(fname,"r")
+        lines = fptr.readlines()
+        fptr.close()
+        heads = lines[0][:-1].split("\t")
+        for line in lines[1:]:
+            values = line[:-1].split("\t")
+            this_dict = dict( zip( heads, values))
+            this_group = this_dict.get('group','Oops')
+            this_dict['local_image']=options.local_images
+            self.add_to_group(this_group, person(**this_dict))
+        self.sort_groups()
+
 
 
     def __getitem__(self,item):
@@ -137,41 +203,9 @@ class people():
             output = sorted(output,key=lambda x:x.displayname)
         return output
 
-all_people=people()
 """for later: https://nationalmaglab.org/research/publications-all"""
 
-for line in lines:
-    #comments
-    if line[0] == '#':
-        continue
-
-    #sanatize any key=value pairs, store them temporarily in stuff
-    spl = line.split("=") 
-    if len(spl) < 2:
-        continue
-    key = spl[0].strip().strip('"')
-    #val = line[spl[1].strip().strip('"')
-    val = line[line.index('=')+1:].strip().strip('"')
-
-    #check for parsing.
-    if key in ['research_area','displayname','title','room','phone','email','web','group', 'other','image','withus', 'other_email']:
-        stuff[key]=val
-    else:
-        print("Unknown keyword ", line)
-
-    #we assume that group happens last.  
-    #When it appears, injest stuff into a person, add to the appropriate list.
-    if key == 'group': 
-        withus = True
-        if 'withus' in stuff:
-            withus =  eval(stuff['withus'])
-        if 'displayname' in stuff and withus:
-            this_group = stuff.get('group','Oops') 
-            stuff['local_image']=options.local_images
-
-            all_people.add_to_group(this_group,person(**stuff)) # **stuff unrolls to key=value pairs for functions
-        stuff={}
-all_people.sort_groups()
+#set up.
 
 def physics_email_hunt(all_people):
     ap = nar(all_people.return_all_people())
@@ -179,12 +213,22 @@ def physics_email_hunt(all_people):
     still_old = ap[b]
     for p in still_old:
         print(p.displayname) #, p.email
-physics_email_hunt(all_people)
 
 
 if options.research_area is not None:
     for person in all_people[options.research_area]:
         print(person.get_name())
+
+if options.email:
+    physics_email_hunt(all_people)
+if options.tsv:
+    all_people.to_tsv("test.tsv")
+
+all_people=people()
+if options.fname[-3:] == 'txt':
+    all_people.parse_text_file(options.fname)
+elif options.fname[-3:] == 'tsv':
+    all_people.parse_tsv(options.fname)
 if options.page_skip is False:
     #set up the template.
     loader=jinja2.FileSystemLoader('.')
