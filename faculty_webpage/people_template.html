@@ -69,14 +69,13 @@
                     {%for f in all_people[category]%}
                     <tr>
                         <td class="c1" valign="top">{{f.image}}</td>
-                        <td class="c1" valign="top">{{f.name_and_link}}</a></td>
+                        <td class="c1" valign="top">{{f.name_and_link}}</td>
                         <td class="c1" valign="top">{{f.title}}</td>
                         <td class="c1" valign="top">{{f.room}}</td>
                         <td class="c1" valign="top">{{f.phone}}</td>
-                        <td class="c1" valign="top"><a {{f.sendemail}}>send email</a><br>
+                        <td class="c1" valign="top"><a {{f.sendemail}}>send email</a><br />
                                                     <a {{f.showemail}}>show email</a></td>
-                    </tr>
-                    {%endfor%}
+                    </tr> {%endfor%}
                 </tbody>
             </table>
             </td>

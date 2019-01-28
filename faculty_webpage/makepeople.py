@@ -6,7 +6,7 @@ import glob
 import numpy as np
 nar = np.array
 
-full_key_list = ['displayname','department','title','room','phone','email', 'other_email','web','group','research_area', 'other','image','withus']
+full_key_list = ['displayname','department','title','room','phone','email', 'other_email','web','group','research_area', 'other','image','withus', 'image_name']
 from optparse import OptionParser
 parser = OptionParser("python makepeople.py <options> \n\tmakes the people page.  Maybe does other stuff.")
 parser.add_option("-l", "--local_images", dest="local_images", help="Uses local images to make sure things work.",
@@ -18,7 +18,7 @@ parser.add_option("-p", "--page_skip", dest="page_skip", help="skip making the p
 parser.add_option("-t", "--tsv", dest="tsv", help="make a tsv page",
                   action = "store_true", default = False)
 parser.add_option("-n", "--fname", dest="fname", help="filename",
-                  action = "store", default = "faculty_list.txt")
+                  action = "store", default = "CurrentList.tsv")
 parser.add_option("-e", "--email", dest="email", help="Hunt for email addresses that are still physics.fsu.edu",
                   action = "store_true", default = False)
 (options, args) = parser.parse_args()
@@ -35,7 +35,7 @@ def no_whites(something):
 import physics_data
 class person():
     def __init__(self, displayname=None,Name=None,
-            image=None,title="",room="",phone="",email=None,web=None,group=None,
+            image_name=None,image=None,title="",room="",phone="",email=None,web=None,group=None,
             research_area=None, other=None, other_email=None,
             local_image=False,Department=None,withus=""):
         self.displayname=displayname
@@ -43,7 +43,7 @@ class person():
 
         if Name is not None:
             self.displayname=Name
-        self.image      =image
+        self.image_name      =image_name
         if local_image:
             image_root = "images"
         else:
@@ -79,27 +79,29 @@ class person():
             names = self.displayname.split(",")
             self.firstname=no_whites(names[1])
             self.lastname=no_whites(names[0])
-        if self.image == None:
+        if self.image_name == None:
             image_name = "%s%s.jpg"%(self.lastname,self.firstname)
         else:
-            image_name = self.image
+            image_name = self.image_name
+        self.image_name=image_name
 
         if glob.glob("images/%s"%image_name) != []:
-            self.image = "<img alt='%s' height='50' width='50' src='%s/%s'>"%(image_name,image_root,image_name)
+            self.image = "<img alt=\"%s\" data-entity-type=\"\" data-entity-uuid=\"\"  height=\"50\" src=\"%s/%s\" width=\"50\" />"%(image_name,image_root,image_name)
         else:
             self.image = "&nbsp;"
+
         if self.email not in [None,'']:
             try:
                 is_formed_right = self.email.index("@")
             except:
                 print("Email error", self.displayname)
 
-            name = '"%s %s"'%(names[1],names[0])
+            name = '&quot;%s %s&quot;'%(names[1],names[0])
             p1 = self.email.split("@")
-            addy =   '"%s"'%p1[0]
-            domain = '"%s"'%p1[1]
-            send_email = "href='javascript:send(%s,%s,%s)'"%(name,addy,domain)
-            show_email = "href='javascript:show(%s,%s,%s)'"%(name,addy,domain)
+            addy =   '&quot;%s&quot;'%p1[0]
+            domain = '&quot;%s&quot;'%p1[1]
+            send_email = 'href="javascript:send(%s,%s,%s)"'%(name,addy,domain)
+            show_email = 'href="javascript:show(%s,%s,%s)"'%(name,addy,domain)
             self.email_domain = domain
             #self.email=send_email
             self.sendemail=send_email
@@ -180,7 +182,7 @@ class people():
         fptr = open(fname,"r")
         lines = fptr.readlines()
         fptr.close()
-        heads = lines[0][:-1].split("\t")[:-1]
+        heads = lines[0][:-1].split("\t")
         for line in lines[1:]:
             values = line[:-1].split("\t")
             this_dict = dict( zip( heads, values))
@@ -214,21 +216,19 @@ def physics_email_hunt(all_people):
     for p in still_old:
         print(p.displayname) #, p.email
 
-
-if options.research_area is not None:
-    for person in all_people[options.research_area]:
-        print(person.get_name())
-
-if options.email:
-    physics_email_hunt(all_people)
-if options.tsv:
-    all_people.to_tsv("test.tsv")
-
 all_people=people()
 if options.fname[-3:] == 'txt':
     all_people.parse_text_file(options.fname)
 elif options.fname[-3:] == 'tsv':
     all_people.parse_tsv(options.fname)
+if options.tsv:
+    all_people.to_tsv("test.tsv")
+if options.email:
+    physics_email_hunt(all_people)
+if options.research_area is not None:
+    for person in all_people[options.research_area]:
+        print(person.get_name())
+
 if options.page_skip is False:
     #set up the template.
     loader=jinja2.FileSystemLoader('.')
