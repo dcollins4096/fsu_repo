@@ -180,7 +180,7 @@ class people():
         fptr = open(fname,"r")
         lines = fptr.readlines()
         fptr.close()
-        heads = lines[0][:-1].split("\t")
+        heads = lines[0][:-1].split("\t")[:-1]
         for line in lines[1:]:
             values = line[:-1].split("\t")
             this_dict = dict( zip( heads, values))
