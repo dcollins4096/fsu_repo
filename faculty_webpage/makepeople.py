@@ -183,6 +183,8 @@ class people():
         lines = fptr.readlines()
         fptr.close()
         heads = lines[0][:-1].split("\t")
+        if heads[-1][-1] == '\r':
+            heads[-1] = heads[-1][:-1]
         for line in lines[1:]:
             values = line[:-1].split("\t")
             this_dict = dict( zip( heads, values))
