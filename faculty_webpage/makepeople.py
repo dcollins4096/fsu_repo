@@ -21,6 +21,8 @@ parser.add_option("-n", "--fname", dest="fname", help="filename",
                   action = "store", default = "CurrentList.tsv")
 parser.add_option("-e", "--email", dest="email", help="Hunt for email addresses that are still physics.fsu.edu",
                   action = "store_true", default = False)
+parser.add_option("-x", "--title_revert", dest="title_revert", help="ug this sucks",
+                  action = "store_true", default = False)
 (options, args) = parser.parse_args()
 
 def no_whites(something):
@@ -100,8 +102,8 @@ class person():
             p1 = self.email.split("@")
             addy =   '&quot;%s&quot;'%p1[0]
             domain = '&quot;%s&quot;'%p1[1]
-            send_email = 'href="javascript:send(%s,%s,%s)"'%(name,addy,domain)
-            show_email = 'href="javascript:show(%s,%s,%s)"'%(name,addy,domain)
+            send_email = ' href="javascript:send(%s,%s,%s)"'%(name,addy,domain)
+            show_email = ' href="javascript:show(%s,%s,%s)"'%(name,addy,domain)
             self.email_domain = domain
             #self.email=send_email
             self.sendemail=send_email
@@ -230,6 +232,22 @@ if options.email:
 if options.research_area is not None:
     for person in all_people[options.research_area]:
         print(person.get_name())
+
+if options.title_revert is True:
+    old_version=people()
+    old_version.parse_text_file('faculty_list.txt')
+    current=people()
+    current.parse_tsv('CurrentList.tsv')
+    old_people = old_version.return_all_people()
+    new_people = current.return_all_people()
+    print("old",len(old_people))
+    print("new",len(new_people))
+    for po in old_people:
+        for pn in new_people:
+            if po.displayname == pn.displayname:
+                if po.title != pn.title:
+                    print("Person %30s old %20s new %20s"%(po.displayname, po.title,pn.title))
+    
 
 if options.page_skip is False:
     #set up the template.
