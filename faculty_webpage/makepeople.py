@@ -87,7 +87,8 @@ class person():
             names = self.displayname.split(",")
             self.firstname=no_whites(names[1])
             self.lastname=no_whites(names[0])
-        if self.image_name == None:
+
+        if self.image_name == None or self.image_name == "":
             image_name = "%s%s.jpg"%(self.lastname,self.firstname)
         else:
             image_name = self.image_name
