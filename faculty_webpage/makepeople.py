@@ -21,7 +21,7 @@ parser.add_option("-n", "--fname", dest="fname", help="filename",
                   action = "store", default = "CurrentList.tsv")
 parser.add_option("-e", "--email", dest="email", help="Hunt for email addresses that are still physics.fsu.edu",
                   action = "store_true", default = False)
-parser.add_option("-x", "--title_revert", dest="title_revert", help="ug this sucks",
+parser.add_option("-x", "--title_revert", dest="title_revert", help="look for title changes",
                   action = "store_true", default = False)
 (options, args) = parser.parse_args()
 
@@ -35,9 +35,15 @@ def no_whites(something):
     #print "x"
     return out
 import physics_data
+default_space = "&nbsp;"
+def make_space(val):
+    if len(val.strip()) ==0:
+        return default_space
+    else:
+        return val
 class person():
     def __init__(self, displayname=None,Name=None,
-            image_name=None,image=None,title="",room="",phone="",email=None,web=None,group=None,
+            image_name=None,image=None,title="",room=default_space,phone=default_space,email=None,web=None,group=None,
             research_area=None, other=None, other_email=None,
             local_image=False,Department=None,withus=""):
         self.displayname=displayname
@@ -51,8 +57,8 @@ class person():
         else:
             image_root = "/sites/g/files/upcbnu441/files/media/images_people/"
         self.title      =title
-        self.room       =room
-        self.phone      =phone
+        self.room       =make_space(room)
+        self.phone      =make_space(phone)
         self.email       =email
         self.web        =web
         self.group = group
