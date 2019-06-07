@@ -88,16 +88,29 @@ class person():
             self.firstname=no_whites(names[1])
             self.lastname=no_whites(names[0])
 
-        if self.image_name == None or self.image_name == "":
+        if self.image_name == None or self.image_name == "" or self.image_name == "\r":
             image_name = "%s%s.jpg"%(self.lastname,self.firstname)
         else:
             image_name = self.image_name
-        self.image_name=image_name
 
-        if glob.glob("images/%s"%image_name) != []:
+        if image_name[-1] == "\r":
+            image_name=image_name[:-1]
+
+        doit = False
+        if self.displayname.startswith('Poun'):
+            doit=True
+
+
+        self.image_name=image_name
+        filelist=glob.glob("images/%s"%image_name)
+        if doit:
+            print(image_name)
+
+        if filelist != []:
             self.image = "<img alt=\"%s\" data-entity-type=\"\" data-entity-uuid=\"\"  height=\"50\" src=\"%s/%s\" width=\"50\" />"%(image_name,image_root,image_name)
         else:
             self.image = "&nbsp;"
+
 
         if self.email not in [None,'']:
             try:
