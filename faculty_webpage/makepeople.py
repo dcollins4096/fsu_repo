@@ -193,6 +193,7 @@ class people():
                 withus = True
                 if 'withus' in stuff:
                     withus =  eval(stuff['withus'])
+                    print("WITH US")
                 if 'displayname' in stuff and withus:
                     this_group = stuff.get('group','Oops') 
                     stuff['local_image']=options.local_images
