@@ -35,8 +35,12 @@ def parse_iframe(string):
 
 draft_1="""<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=rpif5nsqd7bipmkriqhfoqr22k%40group.calendar.google.com&amp;color=%23B1440E&amp;src=7utib8ste6k7vhvdtf3d12r79k%40group.calendar.google.com&amp;color=%23875509&amp;src=1jdrd283q5ass10b0d2t241c4s%40group.calendar.google.com&amp;color=%2328754E&amp;src=a616nel9l80bhpfnnhmkf1n7o8%40group.calendar.google.com&amp;color=%23182C57&amp;src=aaug7o5n7103nu2rn9gbqhd8ik%40group.calendar.google.com&amp;color=%2342104A&amp;src=nbk8v9jvejqqlpcfpr4fq2l9f4%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>"""
 large_view="""<iframe src="https://calendar.google.com/calendar/embed?title=FSU%20Physics%20Seminars&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=rpif5nsqd7bipmkriqhfoqr22k%40group.calendar.google.com&amp;color=%23B1440E&amp;src=r1qo2c73g80kihocpdijf9hbf0%40group.calendar.google.com&amp;color=%235229A3&amp;src=7utib8ste6k7vhvdtf3d12r79k%40group.calendar.google.com&amp;color=%23875509&amp;src=1jdrd283q5ass10b0d2t241c4s%40group.calendar.google.com&amp;color=%2328754E&amp;src=a616nel9l80bhpfnnhmkf1n7o8%40group.calendar.google.com&amp;color=%23182C57&amp;src=aaug7o5n7103nu2rn9gbqhd8ik%40group.calendar.google.com&amp;color=%2342104A&amp;src=nbk8v9jvejqqlpcfpr4fq2l9f4%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>"""
+#Note: Prof. Reina noticed a glitch with the Grad Seminar page.  It was removed in this version.
+oct_2020="""<iframe frameborder="0" height="400" scrolling="no" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=rpif5nsqd7bipmkriqhfoqr22k%40group.calendar.google.com&amp;color=%23B1440E&amp;src=r1qo2c73g80kihocpdijf9hbf0%40group.calendar.google.com&amp;color=%235229A3&amp;src=1jdrd283q5ass10b0d2t241c4s%40group.calendar.google.com&amp;color=%2328754E&amp;src=a616nel9l80bhpfnnhmkf1n7o8%40group.calendar.google.com&amp;color=%23182C57&amp;src=aaug7o5n7103nu2rn9gbqhd8ik%40group.calendar.google.com&amp;color=%2342104A&amp;src=nbk8v9jvejqqlpcfpr4fq2l9f4%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FNew_York" style="border-width:0" width="100%"></iframe>"""
+
 main = parse_iframe(draft_0)
 new = parse_iframe(large_view)
+oct_2020_thing = parse_iframe(oct_2020)
 def kzz(lst):
     return [a[0] for a in lst]
 def vzz(lst):
@@ -108,4 +112,4 @@ def differ(D1,D2, print_samesies=True):
                 print("wtf? !!!!!! %d %d"%(len(s1),len(s2)))
 
 
-dumb=differ(main,new,print_samesies=False)
+dumb=differ(main,oct_2020_thing,print_samesies=False)
