@@ -330,8 +330,29 @@ function CalendarPusher() {
     if ( thisEvent.Publish == 'yes'){
       thisTestBox.setBackground('yellow')
       var makeNewCalendarEvent = true; //this is for debugging only.
-      if ( makeNewCalendarEvent == true ){
-        if ( thisEvent.CalendarEventID == null ){
+      if (  true ){
+        //check existing URL first.
+         if ( thisEvent.CalendarEventID == null ){
+           makeNewCalendarEvent=true;
+         }else{
+          var thisCalendarEvent = calendar.getEventById(thisEvent.CalendarEventID);
+          if ( thisCalendarEvent == null ){
+            testBox.setValue("Error: Calendar Event Not Found. "+thisEvent.CalendarEventID);
+            makeNewCalendarEvent = true;
+          }else{
+            thisTestBox.setValue( 'Fetching existing event.'); SpreadsheetApp.flush();
+            var newID = thisCalendarEvent.getId();
+            thisTestBox.setValue('Existing Calendar ' + thisEvent.CalendarEventID );
+            if ( newID != thisEvent.CalendarEventID ){
+              testBox.setValue('Error: event ID mismatch.  Clobbering the old one.');
+            }
+            thisTestBox.setValue( 'Event exists: updating values');
+            thisEvent.updateCalendarEvent( thisCalendarEvent,newEvent=false);
+            thisTestBox.setValue('Updated');
+          }
+
+         }
+        if ( makeNewCalendarEvent == true ){
           thisTestBox.setValue( 'Creating new event'); SpreadsheetApp.flush();
 
           var thisCalendarEvent = calendar.createEvent(thisEvent.getTitle(), thisEvent.getStartTime(), thisEvent.getEndTime());
@@ -342,21 +363,7 @@ function CalendarPusher() {
           //thisTestBox.setBackground(null);
 
         }else{
-          var thisCalendarEvent = calendar.getEventById(thisEvent.CalendarEventID);
-          if ( thisCalendarEvent == null ){
-            testBox.setValue("Error: Calendar Event Not Found. "+thisEvent.CalendarEventID);
-          }else{
-            thisTestBox.setValue( 'Fetching existing event.'); SpreadsheetApp.flush();
-            var newID = thisCalendarEvent.getId();
-            thisTestBox.setValue('t12 Existing ID ' + thisEvent.CalendarEventID );
-            if ( newID != thisEvent.CalendarEventID ){
-              testBox.setValue('Error: event ID mismatch');
-            }
-            thisTestBox.setValue( 'Even exists: updating values');
-            thisEvent.updateCalendarEvent( thisCalendarEvent,newEvent=false);
-            thisTestBox.setValue('Updated');
-          }
-
+       
         }
         thisCalendarIdBox.setValue(thisEvent.CalendarEventID);
         thisURLBox.setValue(thisEvent.getCalendarURL(thisEvent.CalendarEventID,metaData['calendar id']));
@@ -398,6 +405,8 @@ function CalendarPusher() {
         thisCalendarIdBox.setValue('');
         var thisPublishBox = getBoxByID(i,'Publish');
         thisPublishBox.setValue("");
+        thisCalendarIdBox.setValue("");
+        thisURLBox.setValue("");
       }
       thisTestBox.setValue('Deleted from Calendar.');
       //thisTestBox.setBackground(null);
@@ -417,3 +426,4 @@ function onOpen(){
   menuEntries.push({name:'UpdateCalendar',functionName:'CalendarPusher'});
   sheet.addMenu("Push Calendar Items",menuEntries);
 }
+
