@@ -28,7 +28,7 @@ var valueSelector = function(line, head_line,meta_data){
   general_defaults['Host']='';
   general_defaults['Travel']='';
   general_defaults['Accomodation']='';
-  general_defaults['Duration'] = 1;
+  general_defaults['Duration'] = 1.0;
   general_defaults['CalendarEventID']=null;
   general_defaults['Test']='';
     general_defaults['URL']='';
@@ -43,10 +43,11 @@ var valueSelector = function(line, head_line,meta_data){
     if ( this_index != -1 ){
       //most values are strings, so if the length is non-zero use the value.
       //For the dates, the length will be undefined if it exists.
-      if ( line[this_index].length > 0 ){
+      var length_of_line = line[this_index].length;
+      if ( length_of_line > 0 ){
         output = line[this_index];
       }
-      if ( (key=='Date' || key == 'Time') && line[this_index].length == undefined ){
+      if ( (key=='Duration' || key=='Date' || key == 'Time') && line[this_index].length == undefined ){
         output = line[this_index];
       }
     }
